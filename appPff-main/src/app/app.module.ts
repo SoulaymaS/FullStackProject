@@ -8,7 +8,10 @@ import { ThemeListComponent } from './components/theme-list/theme-list.component
 import { CardComponent } from './components/card/card.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { FormationListComponent } from './formation-list/formation-list.component';
+import { AddFormationComponent } from './add-formation/add-formation.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,11 +19,15 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     ThemeListComponent,
     CardComponent,
     NavbarComponent,
-    CarouselComponent
+    CarouselComponent,
+    FormationListComponent,
+    AddFormationComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

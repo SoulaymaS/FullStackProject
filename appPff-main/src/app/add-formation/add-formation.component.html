@@ -1,0 +1,22 @@
+<div class="container">
+    <h3> Ajouter une nouvelle formation </h3>
+        <form #f="ngForm" (ngSubmit)="addFormation(f.value)">
+            <label for="title">Title</label>
+            <input ngModel required type="text" class="form-control" id="title" name="title">
+
+            <label for="description">Description</label>
+            <input ngModel type="text" class="form-control" id="description" name="description">
+
+            <label for="duration">Duration</label>
+            <input ngModel type="text" class="form-control" id="duration" name="duration">
+            
+            <!-- <label for="formateur">Formateur</label>
+            <input ngModel required type="text" class="form-control" id="formateur" name="formateur">
+            <label for="session">Session</label>
+            <input ngModel type="text" class="form-control" id="session" name="session">
+            <label for="theme">Theme</label>
+            <input ngModel type="text" class="form-control" id="theme" name="theme"> -->
+
+            <button class="btn btn-primary">Ajouter</button>
+        </form>
+</div>

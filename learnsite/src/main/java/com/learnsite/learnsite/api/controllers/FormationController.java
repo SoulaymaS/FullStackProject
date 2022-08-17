@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,12 +20,12 @@ import com.learnsite.learnsite.api.models.Formation;
 import com.learnsite.learnsite.api.repositories.FormationRepository;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/formations")
 public class FormationController {
 	
 @Autowired
 private FormationRepository repo;
-
 @PostMapping("/add")
 public ResponseEntity<Formation> addFormation(@RequestBody Formation formation) {
 	try {
@@ -36,6 +37,7 @@ public ResponseEntity<Formation> addFormation(@RequestBody Formation formation) 
 	
 }
 //Get all resources from database
+
 @GetMapping("/")
 public ResponseEntity<List<Formation>> getFormation(){
 	try {

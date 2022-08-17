@@ -21,7 +21,6 @@ private List<Session> session;
 //define list for themes
 private Theme theme;
 
-
 //Getters and Setters
 public String getTitle() {
 	return title;
