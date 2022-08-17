@@ -11,12 +11,18 @@ private Long number;
 private Formateur formateur;
 private float total; 
 private float hour_price; 
-
-
 private boolean status; // true : payed, false: unpaid 
+private Facture facture;
 
 
 //Getters and Setters
+public Facture getFacture() {
+	return facture;
+}
+public void setFacture(Facture facture) {
+	this.facture = facture;
+}
+
 public Long getNumber() {
 	return number;
 }
@@ -48,4 +54,11 @@ public float getHour_price() {
 public void setHour_price(float hour_price) {
 	this.hour_price = hour_price;
 }
+//public double bill() {
+//	addition=Formateur.getSupplment();
+//	for (Food food : foods) {
+//		addition +=food.getPrix();
+//	}
+//	return addition;
+//}
 }

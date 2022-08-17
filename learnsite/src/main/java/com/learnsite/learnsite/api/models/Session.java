@@ -16,6 +16,21 @@ private Formation formation;
 
 
 //Getters and Setters
+public List<User> getUser() {
+	return user;
+}
+public void setUser(List<User> user) {
+	this.user = user;
+}
+public boolean isSessionStatus() {
+	return sessionStatus;
+}
+public void setSessionStatus(boolean sessionStatus) {
+	this.sessionStatus = sessionStatus;
+}
+private boolean sessionStatus; 
+
+
 public Date getDate() {
 	return date;
 }
