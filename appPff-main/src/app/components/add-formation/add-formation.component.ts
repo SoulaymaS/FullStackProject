@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormationService } from './../services/formation.service';
+import { FormationService } from './../../services/formation.service';
 
 @Component({
   selector: 'app-add-formation',

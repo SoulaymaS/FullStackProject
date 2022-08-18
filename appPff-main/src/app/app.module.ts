@@ -9,9 +9,10 @@ import { CardComponent } from './components/card/card.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormationListComponent } from './formation-list/formation-list.component';
-import { AddFormationComponent } from './add-formation/add-formation.component';
+import { FormationListComponent } from './components/formation-list/formation-list.component';
+import { AddFormationComponent } from './components/add-formation/add-formation.component';
 import { FormsModule } from '@angular/forms';
+import { AdminDashComponent } from './components/admin-dash/admin-dash.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     CarouselComponent,
     FormationListComponent,
-    AddFormationComponent
+    AddFormationComponent,
+    AdminDashComponent
   ],
   imports: [
     BrowserModule,

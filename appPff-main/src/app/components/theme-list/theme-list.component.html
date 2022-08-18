@@ -1,7 +1,10 @@
 <div class="container">
 <h1>Les thèmes</h1>
-<div class="container">
-    <ul><app-card *ngFor="let t of listoftheme" [oneTheme]="t"></app-card></ul>
+<div class="row">
+    <div class="col sm 3">
+        <ul><li><app-card *ngFor="let t of listoftheme" [oneTheme]="t"></app-card></li></ul>
+    </div>
+    
     
 </div>
 </div>
