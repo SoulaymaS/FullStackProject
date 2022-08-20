@@ -6,13 +6,15 @@ import { AdminDashComponent } from './components/admin-dash/admin-dash.component
 import { ThemeListComponent } from './components/theme-list/theme-list.component';
 import { FormationListComponent } from './components/formation-list/formation-list.component';
 
+
 const routes: Routes = [
   {path:'acceuil' , component:AcceuilComponent},
   {path:'themes' , component:ThemeListComponent},
   {path:'formations', component:FormationListComponent},
-  {path: 'adminPage', component: AdminDashComponent,
+  {path: 'adminPage', component: AdminDashComponent, 
    children:[
-  {path:'addFormation', component:AddFormationComponent}
+  {path:'addFormation',outlet:'right', component:AddFormationComponent},
+ 
 ]}
 ];
 

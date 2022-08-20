@@ -13,6 +13,7 @@ import { FormationListComponent } from './components/formation-list/formation-li
 import { AddFormationComponent } from './components/add-formation/add-formation.component';
 import { FormsModule } from '@angular/forms';
 import { AdminDashComponent } from './components/admin-dash/admin-dash.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { AdminDashComponent } from './components/admin-dash/admin-dash.component
     CarouselComponent,
     FormationListComponent,
     AddFormationComponent,
-    AdminDashComponent
+    AdminDashComponent,
+ 
   ],
   imports: [
     BrowserModule,
