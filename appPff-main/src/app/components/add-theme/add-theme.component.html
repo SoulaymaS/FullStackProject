@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="col"></div>
+    <div class="col-8">
+        <h3> Ajouter un nouveau thème </h3>
+        <form #f="ngForm"  (ngSubmit)="addTheme(f.value)">
+            <label for="title">Titre</label>
+            <input ngModel required type="text" class="form-control" id="title" name="title">
+
+            <button class="btn btn-primary">Ajouter</button>
+        </form>
+    </div>
+</div>

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Formation } from '../models/Formation';
+import { Formation } from '../models/formation';
+
 
 @Injectable({
   providedIn: 'root'

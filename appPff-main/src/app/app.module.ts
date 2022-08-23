@@ -13,6 +13,9 @@ import { FormationListComponent } from './components/formation-list/formation-li
 import { AddFormationComponent } from './components/add-formation/add-formation.component';
 import { FormsModule } from '@angular/forms';
 import { AdminDashComponent } from './components/admin-dash/admin-dash.component';
+import { AddThemeComponent } from './components/add-theme/add-theme.component';
+import { AddSessionComponent } from './components/add-session/add-session.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,9 @@ import { AdminDashComponent } from './components/admin-dash/admin-dash.component
     FormationListComponent,
     AddFormationComponent,
     AdminDashComponent,
+    AddThemeComponent,
+    AddSessionComponent,
+    SignUpComponent,
  
   ],
   imports: [

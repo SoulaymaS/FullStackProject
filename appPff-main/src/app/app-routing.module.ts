@@ -5,15 +5,22 @@ import { AcceuilComponent } from './components/acceuil/acceuil.component';
 import { AdminDashComponent } from './components/admin-dash/admin-dash.component';
 import { ThemeListComponent } from './components/theme-list/theme-list.component';
 import { FormationListComponent } from './components/formation-list/formation-list.component';
+import { AddThemeComponent } from './components/add-theme/add-theme.component';
+import { AddSessionComponent } from './components/add-session/add-session.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+
 
 
 const routes: Routes = [
   {path:'acceuil' , component:AcceuilComponent},
   {path:'themes' , component:ThemeListComponent},
   {path:'formations', component:FormationListComponent},
+  {path:'signup', component:SignUpComponent},
   {path: 'adminPage', component: AdminDashComponent, 
    children:[
-  {path:'addFormation',outlet:'right', component:AddFormationComponent},
+  {path:'addFormation', component:AddFormationComponent},
+  {path:'addTheme', component:AddThemeComponent},
+  {path:'addSession',component:AddSessionComponent },
  
 ]}
 ];
