@@ -12,10 +12,10 @@ export class CarouselComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.ThemSer.listTemes.forEach(t => {
-      this.imageList.push(t.image)
-    });
-    console.log(this.imageList);
+    // this.ThemSer.listTemes.forEach(t => {
+    //   this.imageList.push(t.image)
+    // });
+    // console.log(this.imageList);
     
   }
 

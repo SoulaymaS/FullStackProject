@@ -14,6 +14,7 @@ export class AddFormationComponent implements OnInit {
   ngOnInit(): void {
   }
  addFormation(newF){
+  console.log(newF);
   this.formServ.addFormation(newF).subscribe({
     next:(res)=>{
       console.log(res);
@@ -23,5 +24,7 @@ export class AddFormationComponent implements OnInit {
       console.log('probleme avec ajout formation')
     }
   });
+  
+  
  }
 }

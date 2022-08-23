@@ -1,5 +1,8 @@
-<div class="container" class="col-md-7">
-    <h3> Ajouter une nouvelle formation </h3>
+
+<div class="row">
+    <div class="col"></div>
+    <div class="col-8">
+        <h3> Ajouter une nouvelle formation </h3>
         <form #f="ngForm" (ngSubmit)="addFormation(f.value)">
             <label for="title">Title</label>
             <input ngModel required type="text" class="form-control" id="title" name="title">
@@ -9,7 +12,7 @@
 
             <label for="duration">Duration</label>
             <input ngModel type="text" class="form-control" id="duration" name="duration">
-            
+
             <!-- <label for="formateur">Formateur</label>
             <input ngModel required type="text" class="form-control" id="formateur" name="formateur">
             <label for="session">Session</label>
@@ -19,4 +22,5 @@
 
             <button class="btn btn-primary">Ajouter</button>
         </form>
+    </div>
 </div>
