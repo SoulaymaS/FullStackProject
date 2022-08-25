@@ -10,28 +10,45 @@
                                 <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Votre carrière commence par ici
                                     !</p>
 
-                                <form #f="ngForm"  (ngSubmit)="addUser(f.value)" class="mx-1 mx-md-4">
+                                <form #f="ngForm" (ngSubmit)="addUser(f.value)" class="mx-1 mx-md-4">
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                                        <div class="form-outline flex-fill mb-0">
+                                            <input #username="ngModel" ngModel required minlength="3" maxlength="15"
+                                                type="text" id="username" class="form-control" name="username" />
+                                            <div *ngIf="(username.touched || f.submitted)&&username.invalid"
+                                                class="alert-danger">
+                                                <p *ngIf="username.errors.required">Ce champs est obligatoire</p>
+                                                <p *ngIf="username.errors.minlength">Username invalide</p>
+
+                                            </div>
+                                            <label class="form-label" for="username">Username</label>
+                                        </div>
+                                    </div>
 
                                     <div class="d-flex flex-row align-items-center mb-4">
                                         <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                                         <div class="form-outline flex-fill mb-0">
-                                            <input #nom="ngModel" ngModel required minlength="2" maxlength="15" type="text" id="nom" class="form-control" name="nom" />
-                                            <div *ngIf="nom.touched&&nom.invalid" class="alert-danger">
+                                            <input #nom="ngModel" ngModel required minlength="3" maxlength="15"
+                                                type="text" id="nom" class="form-control" name="nom" />
+                                            <div *ngIf="(nom.touched || f.submitted)&&nom.invalid" class="alert-danger">
                                                 <p *ngIf="nom.errors.required">Ce champs est obligatoire</p>
                                                 <p *ngIf="nom.errors.minlength">Nom invalide</p>
-                                    
+
                                             </div>
-                                            <label class="form-label"  for="nom">Nom</label>
+                                            <label class="form-label" for="nom">Nom</label>
                                         </div>
                                     </div>
                                     <div class="d-flex flex-row align-items-center mb-4">
                                         <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                                         <div class="form-outline flex-fill mb-0">
-                                            <input #prenom="ngModel"  ngModel required minlength="2" maxlength="15" type="text" id="prenom" class="form-control" name="prenom"/>
-                                            <div *ngIf="prenom.touched&&prenom.invalid" class="alert-danger">
+                                            <input #prenom="ngModel" ngModel required minlength="3" maxlength="15"
+                                                type="text" id="prenom" class="form-control" name="prenom" />
+                                            <div *ngIf="(prenom.touched || f.submitted)&&prenom.invalid"
+                                                class="alert-danger">
                                                 <p *ngIf="prenom.errors.required">Ce champs est obligatoire</p>
                                                 <p *ngIf="prenom.errors.minlength">Prènom invalide</p>
-                                                
+
                                             </div>
                                             <label class="form-label" for="prenom">Prènom</label>
                                         </div>
@@ -40,25 +57,29 @@
                                     <div class="d-flex flex-row align-items-center mb-4">
                                         <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                                         <div class="form-outline flex-fill mb-0">
-                                            <input #exp="ngModel"  ngModel required email type="email" id="email" name="email"
-                                                class="form-control" />
-                                                <div *ngIf="exp.touched&&exp.invalid" class="alert-danger">
-                                                    <p *ngIf="exp.errors.required">Ce champs est obligatoire</p>
-                                                    <p *ngIf="exp.errors.email">Adresse mail invalide</p>
-                                                </div>
-                                                
-                                            <label class="form-label" for="email">Email</label>
+                                            <input #exp="ngModel" ngModel required email type="email" id="email"
+                                                name="email" class="form-control" />
+                                            <div *ngIf="(exp.touched|| f.submitted)&&exp.invalid" class="alert-danger">
+                                                <p *ngIf="exp.errors.required">Ce champs est obligatoire</p>
+                                                <p *ngIf="exp.errors.email">Adresse mail invalide</p>
+                                            </div>
+
+                                            <label class="form-label" for="email">Adresse mail</label>
                                         </div>
                                     </div>
 
                                     <div class="d-flex flex-row align-items-center mb-4">
                                         <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                                         <div class="form-outline flex-fill mb-0">
-                                            <input  #mdp="ngModel"ngModel required minlength="8" maxlength="20" type="password" id="motdepasse" name="password" class="form-control" />
-                                            <div *ngIf="mdp.touched&&mdp.invalid" class="alert-danger">
+                                            <input [pattern]="passwordPtn" #mdp="ngModel" [(ngModel)]="regArry.mdp"
+                                                ngModel required minlength="8" maxlength="20" type="password"
+                                                id="motdepasse" name="password" class="form-control" />
+                                            <div *ngIf="(mdp.touched|| f.submitted)&&mdp.invalid" class="alert-danger">
                                                 <p *ngIf="mdp.errors.required">Ce champs est obligatoire</p>
-                                                <p *ngIf="mdp.errors.minlength">Trop court</p>
-                                                
+                                                <p *ngIf="mdp.errors.minlength">faible securité</p>
+                                                <p *ngIf="mdp.errors.pattern">mot de passe doit etre composé de lettre
+                                                    majiscule, miniscule et au moins un chiffre</p>
+
                                             </div>
                                             <label class="form-label" for="motdepasse">Mot de passe</label>
                                         </div>
@@ -67,17 +88,27 @@
                                     <div class="d-flex flex-row align-items-center mb-4">
                                         <i class="fas fa-key fa-lg me-3 fa-fw"></i>
                                         <div class="form-outline flex-fill mb-0">
-                                            <input required type="password" id="confmotdepasse"
-                                                class="form-control" />
-                                
+                                            <input #mdpvalid="ngModel" ngModel required [(ngModel)]="regArry.mdpvalid"
+                                                type="password" id="confmotdepasse" class="form-control"
+                                                name="confmotdepasse" />
+                                            <div *ngIf="(mdpvalid.touched|| f.submitted)&&mdpvalid.invalid"
+                                                class="alert-danger">
+                                                <p *ngIf="mdpvalid.errors.required">Ce champs est obligatoire</p>
+
+                                            </div>
+                                            <p *ngIf="(regArry.mdpvalid!=regArry.mdp)&&(mdpvalid.touched|| f.submitted)"
+                                                class="alert-danger">Les champs ne sont pas identiques</p>
+
                                             <label class="form-label" for="confmotdepasse">Confirmer le mot de
                                                 passe</label>
+
                                         </div>
                                     </div>
 
                                     <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                                         <button class="btn btn-primary btn-lg">Valider</button>
                                     </div>
+
 
                                 </form>
 
@@ -94,4 +125,5 @@
             </div>
         </div>
     </div>
+
 </section>

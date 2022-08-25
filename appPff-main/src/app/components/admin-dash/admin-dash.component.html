@@ -1,7 +1,8 @@
 <!--Main Navigation-->
+
 <div class="row">
   
-  <div class="col">
+  <div class="col-4">
     <!-- Sidebar -->
     <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
       <div class="position-sticky">
@@ -9,20 +10,20 @@
           <a class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
             <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Main dashboard</span>
           </a>
-          <a class="list-group-item list-group-item-action py-2 ripple active">
+          <a class="list-group-item list-group-item-action py-2 ripple " routerLinkActive="active" >
             <i class="fas fa-chart-area fa-fw me-3"></i><span>Webiste traffic</span>
           </a>
-          <a routerLink="addFormation" class="list-group-item list-group-item-action py-2 ripple"><i
+          <a routerLink="addFormation" class="list-group-item list-group-item-action py-2 ripple " routerLinkActive="active"><i
               class="fas fa-lock fa-fw me-3"></i><span>Formations</span></a>
 
-          <a routerLink="addSession" class="list-group-item list-group-item-action py-2 ripple"><i
+          <a routerLink="addSession" class="list-group-item list-group-item-action py-2 ripple" routerLinkActive="active"><i
               class="fas fa-chart-line fa-fw me-3"></i><span>Sessions</span></a>
 
-          <a routerLink="addTheme"  class="list-group-item list-group-item-action py-2 ripple">
+          <a routerLink="addTheme"  class="list-group-item list-group-item-action py-2 ripple" routerLinkActive="active">
             <i class="fas fa-chart-pie fa-fw me-3"></i><span>Thèmes</span>
           </a>
-          <a class="list-group-item list-group-item-action py-2 ripple"><i
-              class="fas fa-chart-bar fa-fw me-3"></i><span>Formateurs</span></a>
+          <a routerLink="gestEquipe" routerLinkActive="active" class="list-group-item list-group-item-action py-2 ripple"><i
+              class="fas fa-chart-bar fa-fw me-3"></i><span>Gestion de l'equipe</span></a>
           <a class="list-group-item list-group-item-action py-2 ripple"><i
               class="fas fa-globe fa-fw me-3"></i><span>Inscriptions</span></a>
           <a class="list-group-item list-group-item-action py-2 ripple"><i
@@ -41,7 +42,7 @@
 
 </div>
 
-<router-outlet></router-outlet>
+
 
 
 <!-- Sidebar -->

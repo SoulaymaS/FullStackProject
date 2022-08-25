@@ -16,6 +16,9 @@ import { AdminDashComponent } from './components/admin-dash/admin-dash.component
 import { AddThemeComponent } from './components/add-theme/add-theme.component';
 import { AddSessionComponent } from './components/add-session/add-session.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { AddStaffComponent } from './components/add-staff/add-staff.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +34,9 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
     AddThemeComponent,
     AddSessionComponent,
     SignUpComponent,
+    FooterComponent,
+    DashboardComponent,
+    AddStaffComponent,
  
   ],
   imports: [

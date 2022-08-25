@@ -1,0 +1,11 @@
+.btn {
+    background-color: rgb(109, 203, 199);
+    border-color: rgb(109, 203, 199);;
+}
+.btn:hover{
+    color: black;
+    background-color: white;
+}
+.position{
+    padding:  50px 10px 0; /* Height of navbar */;
+}
