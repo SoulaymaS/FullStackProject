@@ -9,7 +9,7 @@ body {
     
     /* Sidebar */
     .sidebar {
-    position: fixed;
+
     top: 0;
     bottom: 0;
     left: 0;
@@ -36,4 +36,13 @@ body {
     padding-top: 0.5rem;
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    }
+    .active{
+        background-color: rgb(109, 203, 199);
+        border-color: rgb(109, 203, 199);
+    }
+    .active:hover{
+        background-color: rgb(109, 203, 199,0.8);
+        border-color: rgb(109, 203, 199,0.8);
+        color: black;
     }

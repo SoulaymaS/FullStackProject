@@ -8,21 +8,25 @@ import { FormationListComponent } from './components/formation-list/formation-li
 import { AddThemeComponent } from './components/add-theme/add-theme.component';
 import { AddSessionComponent } from './components/add-session/add-session.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { AddStaffComponent } from './components/add-staff/add-staff.component';
 
 
 
 const routes: Routes = [
+  {path:'', redirectTo: 'acceuil', pathMatch: 'full'},
   {path:'acceuil' , component:AcceuilComponent},
   {path:'themes' , component:ThemeListComponent},
   {path:'formations', component:FormationListComponent},
   {path:'signup', component:SignUpComponent},
-  {path: 'adminPage', component: AdminDashComponent, 
+  {path: 'adminPage', component: DashboardComponent, 
    children:[
   {path:'addFormation', component:AddFormationComponent},
   {path:'addTheme', component:AddThemeComponent},
   {path:'addSession',component:AddSessionComponent },
+  {path:'gestEquipe',component:AddStaffComponent}
  
-]}
+ ]}
 ];
 
 @NgModule({

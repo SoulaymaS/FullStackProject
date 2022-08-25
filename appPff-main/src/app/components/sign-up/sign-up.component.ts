@@ -8,12 +8,14 @@ import { UserServiceService } from 'src/app/services/user-service.service';
   styleUrls: ['./sign-up.component.css']
 })
 export class SignUpComponent implements OnInit {
-
+  regArry:any={}
   constructor(private UserServ: UserServiceService,
     private router: Router) { }
 
   ngOnInit(): void {
-  }
+  } 
+  passwordPtn ='^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,16}$'
+ 
   
   addUser(newU) {
     // this.UserServ.addUser(newU).subscribe({
