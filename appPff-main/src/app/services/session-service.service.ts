@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class SessionServiceService {
-  link='http://localhost:8050/formations';
+  link='http://localhost:8050/sessions';
 
   constructor(private http: HttpClient) { }
 

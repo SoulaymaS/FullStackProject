@@ -18,15 +18,15 @@ export class SignUpComponent implements OnInit {
  
   
   addUser(newU) {
-    // this.UserServ.addUser(newU).subscribe({
-    //   next: (res) => {
-    //     console.log(res);
-    //     this.router.navigateByUrl('/acceuil') 
-    //   },
-    //   error: (err) => {
-    //     console.log('probleme avec ajout user')
-    //   } })
-    console.log(newU);
+    this.UserServ.addUser(newU).subscribe({
+      next: (res) => {
+        console.log(res);
+        this.router.navigateByUrl('/signIn') 
+      },
+      error: (err) => {
+        console.log('probleme avec ajout user')
+      } })
+    // console.log(newU);
 
   }
 }

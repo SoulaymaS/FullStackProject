@@ -10,6 +10,7 @@ import { AddSessionComponent } from './components/add-session/add-session.compon
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AddStaffComponent } from './components/add-staff/add-staff.component';
+import { SignInComponent } from './sign-in/sign-in.component';
 
 
 
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path:'themes' , component:ThemeListComponent},
   {path:'formations', component:FormationListComponent},
   {path:'signup', component:SignUpComponent},
+  {path:'signin', component:SignInComponent},
   {path: 'adminPage', component: DashboardComponent, 
    children:[
   {path:'addFormation', component:AddFormationComponent},
