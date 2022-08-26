@@ -19,6 +19,7 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AddStaffComponent } from './components/add-staff/add-staff.component';
+import { SignInComponent } from './sign-in/sign-in.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { AddStaffComponent } from './components/add-staff/add-staff.component';
     FooterComponent,
     DashboardComponent,
     AddStaffComponent,
+    SignInComponent,
  
   ],
   imports: [

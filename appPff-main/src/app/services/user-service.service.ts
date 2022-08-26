@@ -6,7 +6,7 @@ import { User } from '../models/User';
   providedIn: 'root'
 })
 export class UserServiceService {
-  link='http://localhost:8050/formations';
+  link='http://localhost:8050/signup';
   constructor( private http:HttpClient) { }
 
 addUser(newU){
