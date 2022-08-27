@@ -11,6 +11,7 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AddStaffComponent } from './components/add-staff/add-staff.component';
 import { SignInComponent } from './sign-in/sign-in.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 
 
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path:'formations', component:FormationListComponent},
   {path:'signup', component:SignUpComponent},
   {path:'signin', component:SignInComponent},
+  {path:'profile',component: ProfileComponent },
   {path: 'adminPage', component: DashboardComponent, 
    children:[
   {path:'addFormation', component:AddFormationComponent},

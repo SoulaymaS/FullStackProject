@@ -10,18 +10,17 @@ import { ThemeSerrviceService } from '../../services/theme-serrvice.service';
 export class ThemeListComponent implements OnInit {
    listoftheme=[];
    
-
   constructor(private ThemSer:ThemeSerrviceService, private router:Router) { }
 
   ngOnInit(): void {
    this.ThemSer.getThemes().subscribe({
-
     next:(res)=>{
-    this.listoftheme=res
-     
+    this.listoftheme=res;
+    console.log(res);
+    }, error: (err) => {
+      console.log(err);
     }
-
-    })
+    });
   }
 
 }

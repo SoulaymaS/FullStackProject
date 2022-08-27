@@ -68,7 +68,6 @@ public ResponseEntity<Formateur> getFormateurbyId(@PathVariable("id") String id)
 	
 }
 
-//the update method is not working
 @PutMapping("/update/{id}")
 public ResponseEntity<Formateur> updateFormateur(@PathVariable("id") String id, @RequestBody Formateur formateur){
 	Optional<Formateur> formateurData= repo.findById(id);
@@ -78,7 +77,7 @@ public ResponseEntity<Formateur> updateFormateur(@PathVariable("id") String id, 
 		_formateur.setPrenom(formateur.getPrenom());
 		_formateur.setCin(formateur.getCin());
 		_formateur.setProfession(formateur.getProfession());
-		_formateur.setFormation(formateur.getFormation());
+		_formateur.setSession(formateur.getSession());
 		repo.save(_formateur);
 		return  new ResponseEntity<Formateur>(_formateur,HttpStatus.OK);
 	} else {

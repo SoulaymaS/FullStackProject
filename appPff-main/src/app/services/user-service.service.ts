@@ -6,7 +6,7 @@ import { User } from '../models/User';
   providedIn: 'root'
 })
 export class UserServiceService {
-  link='http://localhost:8050/signup';
+  link='http://localhost:8050/';
   constructor( private http:HttpClient) { }
 
 addUser(newU){
@@ -16,5 +16,4 @@ getUsers(){
   return this.http.get<User[]>(`${this.link}/`)
 }
 
-// besoin d'une methode get users with no role // 
 }

@@ -1,0 +1,27 @@
+#div1{
+    margin-left: 5em;
+}
+li{
+    text-decoration: none;
+    list-style: none;
+}
+h1{
+    text-align: center;
+}
+.column {
+    background-color: black;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+}
+
+@media(max-width: 500px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+}

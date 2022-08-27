@@ -12,8 +12,10 @@ public class Theme {
 	@Id
 	private String id;
 	private String title;
+	private String image;
+	private String description;
 	@DBRef
-	private List<Formation> formation;
+	private List<Formation> formations;
 	
 	
 	//Getters and Setters
@@ -23,10 +25,28 @@ public class Theme {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public List<Formation> getFormation() {
-		return formation;
+	public List<Formation> getFormations() {
+		return formations;
 	}
-	public void setFormation(List<Formation> formation) {
-		this.formation = formation;
+	public void setFormations(List<Formation> formations) {
+		this.formations = formations;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public String getImage() {
+		return image;
+	}
+	public void setImage(String image) {
+		this.image = image;
 	}
 }

@@ -20,6 +20,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AddStaffComponent } from './components/add-staff/add-staff.component';
 import { SignInComponent } from './sign-in/sign-in.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
     DashboardComponent,
     AddStaffComponent,
     SignInComponent,
+    ProfileComponent,
  
   ],
   imports: [

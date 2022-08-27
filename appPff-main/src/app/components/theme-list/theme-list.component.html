@@ -1,10 +1,18 @@
-<div class="container">
-<h1>Les thèmes</h1>
-<div class="row">
-    <div class="col sm 3">
-        <ul><li><app-card *ngFor="let t of listoftheme" [oneTheme]="t"></app-card></li></ul>
+<div id="div1">
+    <div id="sec" class="row">
+        <li *ngFor="let t of listoftheme">
+            <div class="col-sm-3">
+                <div class="card" style="width: 18rem;">
+                    <img id="im1" class="card-img-top"
+                        src={{t.image}}
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"> {{t.title}}</h5>
+                        <p class="card-text">{{t.description}}</p>
+                        <a href="#" class="btn btn-primary"> Détails</a>
+                    </div>
+                </div>
+            </div>
+        </li>
     </div>
-    
-    
-</div>
 </div>
