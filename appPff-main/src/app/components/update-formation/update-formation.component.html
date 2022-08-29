@@ -1,0 +1,25 @@
+<div class="position">
+    
+    <h3> Modifier la formation </h3>
+    <form #f="ngForm" (ngSubmit)="modifFormation(f.value)">
+        <label for="title">Title</label>
+        <input [(ngModel)]="myFormation.title" ngModel required type="text" class="form-control" id="title" name="title">
+
+        <label for="description">Description</label>
+        <input [(ngModel)]="myFormation.description" ngModel type="text" class="form-control" id="description" name="description">
+
+        <label for="duration">Duration</label>
+        <input  [(ngModel)]="myFormation.duration" ngModel type="text" class="form-control" id="duration" name="duration">
+        <label for="formation">Thème</label><br>
+        <select  ngModel  class="form-select form-control" >
+            <option [(ngModel)]="myFormation.formation" selected></option>
+            <option *ngFor="let t of listTheme"  id="theme" name="theme" value={{f.titre}}> {{f.titre}} </option>  
+         </select>
+         <br>
+
+       
+
+        <button class="btn btn-primary">Modifier</button>
+    </form>
+
+</div>

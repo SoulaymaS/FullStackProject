@@ -22,4 +22,13 @@ export class ThemeSerrviceService {
     getThemes(){
       return this.http.get<Theme[]>(`${this.link}/`)
     }
+    getThemeById(id){
+      return this.http.get(`${this.link}/${id}`)
+    }
+    deleteTheme(id){
+      return this.http.delete(`${this.link}/${id}`)
+    }
+    updateTheme(newT){
+      return this.http.put(`${this.link}/update/${newT.id}`,newT)
+    }
 }

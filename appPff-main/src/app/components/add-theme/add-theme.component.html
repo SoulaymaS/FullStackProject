@@ -4,8 +4,14 @@
         <form #f="ngForm"  (ngSubmit)="addTheme(f.value)">
             <label for="title">Titre</label>
             <input ngModel required type="text" class="form-control" id="title" name="title">
+            <br>
 
             <button class="btn btn-primary">Ajouter</button>
         </form>
+        <span><a (click)="show = !show" class="showLink" >Afficher la liste des thèmes</a></span>
     </div>
 </div>
+<br><br>
+<section *ngIf="show">
+<app-theme-list></app-theme-list>>
+</section>

@@ -9,7 +9,7 @@ import { ThemeSerrviceService } from 'src/app/services/theme-serrvice.service';
   styleUrls: ['./add-theme.component.css']
 })
 export class AddThemeComponent implements OnInit {
-
+  show=false
   constructor(private ThemSer:ThemeSerrviceService, private router : Router) { }
 
   ngOnInit(): void {

@@ -11,6 +11,7 @@ import { SessionServiceService } from 'src/app/services/session-service.service'
 })
 export class AddSessionComponent implements OnInit {
 listFormation:Formation[]
+show=false
   constructor(private FormSer: FormationService,
     private SessServ:SessionServiceService,
     private router:Router,

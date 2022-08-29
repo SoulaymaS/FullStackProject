@@ -2,7 +2,7 @@
     <h3> Formations </h3>
 
     <ul class="list-group">
-        <li class="list-group-item" *ngFor="let f of listofFormation"> <i>{{ f.title}} ||  {{ f.description}} </i> </li>
+        <li class="list-group-item" *ngFor="let f of listofFormation"> <i>{{ f.title}} ||  {{ f.description}} <span><button [routerLink]="['/adminPage/updateFormation/' ,f]" class="btn btnModifer">Modifier</button></span><span><button (click)="SupprimerFormation(f)" class="btn btnSupprimer">Supprimer</button></span></i> </li>
 
 
     </ul>

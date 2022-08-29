@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
 <h1>Les thèmes</h1>
 <div class="row">
     <div class="col sm 3">
@@ -7,4 +7,26 @@
     
     
 </div>
+</div> -->
+
+<!-- <section *ngFor="let t of listoftheme">
+
+    <div class="themeSection" style="background-image: url({{t}});">
+        <div class="container">
+        <h1>{{t}}</h1>
+        <button routerLink="/formations" class="btn " >Liste des formations</button>
+        <button (click)="supprimerTheme(t.id)" class="btn " >Supprimer le theme</button>
+        <button [routerLink]="['/adminPage/updateTheme/' ,t.id]"  class="btn ">Modifier le thème</button>
+        </div>
+    </div>
+
+</section> -->
+<div class="container">
+    <h3> Thèmes</h3>
+
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let t of listoftheme"> <i>{{ t.titre}} <span><button [routerLink]="['/adminPage/updateTheme/' ,t]" class="btn btnModifer">Modifier</button></span><span><button (click)="supprimerTheme(t.id)" class="btn btnSupprimer">Supprimer</button></span></i> </li>
+
+
+    </ul>
 </div>

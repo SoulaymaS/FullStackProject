@@ -10,7 +10,7 @@
             <input ngModel type="text" class="form-control" id="duration" name="duration">
             
             <label for="formation">Formation</label><br>
-            <select  ngModel  class="form-select" >
+            <select  ngModel  class="form-select form-control" >
                 <option selected>Choisir une formation</option>
                 <option *ngFor="let f of listFormation"  id="formation" name="formation" value={{f.Title}}> {{f.Title}} </option>  
              </select>
@@ -19,5 +19,8 @@
          
             <button class="btn btn-primary">Ajouter</button>
         </form>
-    </div>
+        <span><a (click)="show = !show" class="showLink" >Afficher la liste des Sessions</a></span>
 </div>
+<section *ngIf="show">
+    <app-session-list></app-session-list>>
+    </section>

@@ -19,7 +19,18 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AddStaffComponent } from './components/add-staff/add-staff.component';
-import { SignInComponent } from './sign-in/sign-in.component';
+import { UpdateFormationComponent } from './components/update-formation/update-formation.component';
+
+
+import { UpdateUserComponent } from './components/update-user/update-user.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { UpdateThemeComponent } from './components/update-theme/update-theme.component';
+import { SessionListComponent } from './components/session-list/session-list.component';
+import { UpdateSessionComponent } from './components/update-session/update-session.component';
+import { ListUsersComponent } from './components/list-users/list-users.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -39,7 +50,13 @@ import { SignInComponent } from './sign-in/sign-in.component';
     DashboardComponent,
     AddStaffComponent,
     SignInComponent,
- 
+    UpdateSessionComponent,
+    UpdateThemeComponent,
+    UpdateFormationComponent,
+    UpdateUserComponent,
+    SessionListComponent,
+    ListUsersComponent,
+
   ],
   imports: [
     BrowserModule,

@@ -10,7 +10,12 @@ import { AddSessionComponent } from './components/add-session/add-session.compon
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AddStaffComponent } from './components/add-staff/add-staff.component';
-import { SignInComponent } from './sign-in/sign-in.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { UpdateThemeComponent } from './components/update-theme/update-theme.component';
+import { UpdateSessionComponent } from './components/update-session/update-session.component';
+import { UpdateFormationComponent } from './components/update-formation/update-formation.component';
+import { UpdateUserComponent } from './components/update-user/update-user.component';
+
 
 
 
@@ -26,7 +31,11 @@ const routes: Routes = [
   {path:'addFormation', component:AddFormationComponent},
   {path:'addTheme', component:AddThemeComponent},
   {path:'addSession',component:AddSessionComponent },
-  {path:'gestEquipe',component:AddStaffComponent}
+  {path:'gestEquipe',component:AddStaffComponent},
+  {path:'updateTheme/:id',component:UpdateThemeComponent},
+  {path:'updateSession/:id',component:UpdateSessionComponent},
+  {path:'updateFormation/:id',component:UpdateFormationComponent},
+  {path:'updateSession/:id',component:UpdateUserComponent}
  
  ]}
 ];
