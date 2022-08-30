@@ -14,13 +14,20 @@ private String prenom;
 private String cin;
 private String profession;
 @DBRef
-private Formation formation;
+private Session session;
 
-public Formation getFormation() {
-	return formation;
+
+public String getId() {
+	return id;
 }
-public void setFormation(Formation formation) {
-	this.formation = formation;
+public void setId(String id) {
+	this.id = id;
+}
+public Session getSession() {
+	return session;
+}
+public void setSession(Session session) {
+	this.session = session;
 }
 public String getNom() {
 	return nom;

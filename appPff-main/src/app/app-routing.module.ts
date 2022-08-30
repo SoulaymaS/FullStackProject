@@ -26,6 +26,7 @@ const routes: Routes = [
   {path:'formations', component:FormationListComponent},
   {path:'signup', component:SignUpComponent},
   {path:'signin', component:SignInComponent},
+  {path:'profile',component: ProfileComponent },
   {path: 'adminPage', component: DashboardComponent, 
    children:[
   {path:'addFormation', component:AddFormationComponent},

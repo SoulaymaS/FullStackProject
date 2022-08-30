@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HostListener } from '@angular/core';
+import { LoginServiceService } from './../../services/login-service.service';
+import { TokenStorageService } from './../../services/token-storage.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,12 +10,14 @@ import { HostListener } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private token:TokenStorageService) { }
 
   ngOnInit(): void {
   }
 
-
+toLogout(){
+this.token.signOut();
+}
 @HostListener('window:scroll', ['$event'])
 
 onWindowScroll() {

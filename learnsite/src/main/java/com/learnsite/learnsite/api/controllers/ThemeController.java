@@ -19,7 +19,7 @@ import com.learnsite.learnsite.api.models.Theme;
 import com.learnsite.learnsite.api.repositories.ThemeRepository;
 
 @RestController
-@RequestMapping("/Themes")
+@RequestMapping("/themes")
 public class ThemeController {
 
 	
@@ -74,7 +74,9 @@ public ResponseEntity<Theme> updateTheme(@PathVariable("id") String id, @Request
 	if (themeData.isPresent()) {
 		Theme _theme = themeData.get();
 		_theme.setTitle(theme.getTitle());
-		_theme.setFormation(theme.getFormation());
+		_theme.setFormations(theme.getFormations());
+		_theme.setDescription(theme.getDescription());
+		_theme.setImage(theme.getImage());
 		repo.save(_theme);
 		return  new ResponseEntity<Theme>(_theme,HttpStatus.OK);
 	} else {

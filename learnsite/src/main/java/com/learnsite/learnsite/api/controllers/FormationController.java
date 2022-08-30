@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import com.learnsite.learnsite.api.models.Formation;
 import com.learnsite.learnsite.api.repositories.FormationRepository;
@@ -27,6 +29,7 @@ public class FormationController {
 @Autowired
 private FormationRepository repo;
 @PostMapping("/add")
+@PreAuthorize("hasRole('ADMIN')")
 public ResponseEntity<Formation> addFormation(@RequestBody Formation formation) {
 	try {
 	repo.save(formation);
@@ -77,7 +80,7 @@ public ResponseEntity<Formation> updateFormation(@PathVariable("id") String id, 
 		_formation.setTitle(formation.getTitle());
 		_formation.setDescription(formation.getDescription());
 		_formation.setDuration(formation.getDuration());
-		_formation.setFormateur(formation.getFormateur());
+	    _formation.setFormateur(formation.getFormateur());
 		_formation.setSession(formation.getSession());
 		repo.save(_formation);
 		return  new ResponseEntity<Formation>(_formation,HttpStatus.OK);
@@ -87,6 +90,7 @@ public ResponseEntity<Formation> updateFormation(@PathVariable("id") String id, 
 }
 
 @DeleteMapping("/{id}")
+@PreAuthorize("hasRole('ADMIN')")
 public ResponseEntity<Formation> deleteFormation(@PathVariable("id") String id){
 	try {
 		repo.deleteById(id);
@@ -97,6 +101,7 @@ public ResponseEntity<Formation> deleteFormation(@PathVariable("id") String id){
 }
 
 @DeleteMapping("/")
+@PreAuthorize("hasRole('ADMIN')")
 public ResponseEntity<Formation> deleteFormations(){
 	try {
 		repo.deleteAll();

@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AcceuilComponent } from './components/acceuil/acceuil.component';
-import { ThemeListComponent } from './components/theme-list/theme-list.component';
+
 import { CardComponent } from './components/card/card.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
@@ -31,6 +31,8 @@ import { ListUsersComponent } from './components/list-users/list-users.component
 
 
 
+import { ProfileComponent } from './components/profile/profile.component';
+import { ThemeListComponent } from './components/theme-list/theme-list.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +58,7 @@ import { ListUsersComponent } from './components/list-users/list-users.component
     UpdateUserComponent,
     SessionListComponent,
     ListUsersComponent,
+    ProfileComponent,
 
   ],
   imports: [
