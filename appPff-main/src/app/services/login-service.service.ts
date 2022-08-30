@@ -22,9 +22,7 @@ export class LoginServiceService {
   toRegister(user): Observable<any>{
     return this.http.post(AUTH_API + 'signup', user, httpOptions);
   }
-  toLogOut(){
 
-  }
  isLogedIn(){
 
  }

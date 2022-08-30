@@ -1,6 +1,7 @@
 .styleNavbar{
-    background-color: rgba(255,255,255,0.8);
-    
+    background-color: rgba(255,255,255,0);
+    height:15%;
+  
 }
 .scrollingstyle{
     background-color: white;
@@ -8,8 +9,8 @@
 }
 .navbar a{
     color: black;
-    font-weight: 700;
-    font-size: 16px;
+    font-weight: 1000;
+    font-size: 20px;
     
 }
 .dropdown:hover .dropdown-menu {
@@ -20,4 +21,8 @@
  .navbar a:hover{
     color:rgb(109, 203, 199)
     
+}
+#sec{
+    border-bottom:1px solid;
+    padding-bottom:15px;
 }
