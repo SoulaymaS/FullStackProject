@@ -9,19 +9,19 @@ import { SessionServiceService } from 'src/app/services/session-service.service'
   styleUrls: ['./session-list.component.css']
 })
 export class SessionListComponent implements OnInit {
-  listofsessions=["1","2","3"]
+  listofsessions
   listFormation
   constructor( private SessionServ:SessionServiceService, private router:Router) { }
 
   ngOnInit(): void {
-    //     this.SessionServ.getSessions().subscribe({
-    //   next: (res)=> {
-    //     this.listofsessions= res;
-    //     console.log(res);
-    //   }, error: (err) =>{
-    //     console.log(err);
-    //   }
-    // });
+        this.SessionServ.getSessions().subscribe({
+      next: (res)=> {
+        this.listofsessions= res;
+        console.log(res);
+      }, error: (err) =>{
+        console.log(err);
+      }
+    });
   
   }
 

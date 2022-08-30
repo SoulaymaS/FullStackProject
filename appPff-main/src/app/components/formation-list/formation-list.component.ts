@@ -9,17 +9,17 @@ import { FormationService } from './../../services/formation.service';
   styleUrls: ['./formation-list.component.css']
 })
 export class FormationListComponent implements OnInit {
-  listofFormation=["1","2","3"];
+  listofFormation;
   constructor(private formServ: FormationService, private router:Router){}
   ngOnInit(): void {
-    // this.formServ.getFormations().subscribe({
-    //   next: (res)=> {
-    //     this.listofFormation= res;
-    //     console.log(res);
-    //   }, error: (err) =>{
-    //     console.log(err);
-    //   }
-    // });
+    this.formServ.getFormations().subscribe({
+      next: (res)=> {
+        this.listofFormation= res;
+        console.log(res);
+      }, error: (err) =>{
+        console.log(err);
+      }
+    });
   }
   SupprimerFormation(id){
     
