@@ -26,3 +26,23 @@
     border-bottom:1px solid;
     padding-bottom:15px;
 }
+
+.profileMenu {
+    display: flex;
+    position: relative;
+
+}
+.dropdown-menu-end {
+    right: 0;
+    left: auto;
+  }
+.icon{
+    display: inline-block;
+    margin-right: 7%;
+    width: min-content;
+}
+
+
+
+
+

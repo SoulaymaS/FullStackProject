@@ -2,8 +2,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap');
 *{
     font-family: 'Inconsolata', monospace,'Courier New', Courier;
-}
-.btn {
-    background-color: rgb(109, 203, 199);
-    border-color: rgb(109, 203, 199);;
+    list-style: none;
 }
