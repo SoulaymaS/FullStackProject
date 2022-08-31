@@ -1,7 +1,7 @@
 export class Theme {
   
     constructor(
-      public _id: number,
+      public id: string,
       public titre: string,
       public formations:[]
     ) {

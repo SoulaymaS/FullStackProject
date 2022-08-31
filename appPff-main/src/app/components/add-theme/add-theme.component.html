@@ -4,8 +4,23 @@
         <form #f="ngForm"  (ngSubmit)="addTheme(f.value)">
             <label for="title">Titre</label>
             <input ngModel required type="text" class="form-control" id="title" name="title">
+            <br>
 
             <button class="btn btn-primary">Ajouter</button>
         </form>
+        <span><a (click)="show = !show" class="showLink" >Afficher la liste des thèmes</a></span>
     </div>
 </div>
+<br><br>
+<section *ngIf="show">
+    <div class="container">
+        <h3> Thèmes</h3>
+    
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let t of listoftheme"> <i>{{ t.titre}} <span><button [routerLink]="['/adminPage/updateTheme/' ,t]" class="btn btnModifer">Modifier</button></span><span><button (click)="supprimerTheme(t.id)" class="btn btnSupprimer">Supprimer</button></span></i> </li>
+    
+    
+        </ul>
+    </div>
+    
+</section>

@@ -1,14 +1,9 @@
+.position{
+    padding:  50px 10px 0; /* Height of navbar */;
+}
 .alert-danger{
     background-color: rgba(0,0,0,0);
     color: red;
-}
-.btn {
-    background-color: rgb(109, 203, 199);
-    border-color: rgb(109, 203, 199);;
-}
-.btn:hover{
-    color: black;
-    background-color: white;
 }
 .form-control:focus {
     border-color: rgb(109, 203, 199);

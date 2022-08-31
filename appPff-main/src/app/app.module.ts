@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AcceuilComponent } from './components/acceuil/acceuil.component';
-import { ThemeListComponent } from './components/theme-list/theme-list.component';
+
 import { CardComponent } from './components/card/card.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
@@ -19,8 +19,20 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AddStaffComponent } from './components/add-staff/add-staff.component';
-import { SignInComponent } from './sign-in/sign-in.component';
+import { UpdateFormationComponent } from './components/update-formation/update-formation.component';
+
+
+import { UpdateUserComponent } from './components/update-user/update-user.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { UpdateThemeComponent } from './components/update-theme/update-theme.component';
+import { SessionListComponent } from './components/session-list/session-list.component';
+import { UpdateSessionComponent } from './components/update-session/update-session.component';
+import { ListUsersComponent } from './components/list-users/list-users.component';
+
+
+
 import { ProfileComponent } from './components/profile/profile.component';
+import { ThemeListComponent } from './components/theme-list/theme-list.component';
 
 @NgModule({
   declarations: [
@@ -40,8 +52,14 @@ import { ProfileComponent } from './components/profile/profile.component';
     DashboardComponent,
     AddStaffComponent,
     SignInComponent,
+    UpdateSessionComponent,
+    UpdateThemeComponent,
+    UpdateFormationComponent,
+    UpdateUserComponent,
+    SessionListComponent,
+    ListUsersComponent,
     ProfileComponent,
- 
+
   ],
   imports: [
     BrowserModule,
