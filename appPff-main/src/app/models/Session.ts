@@ -1,7 +1,7 @@
 export class Session {
   
     constructor(
-      public _id: number,
+      public id: string,
       public date: Date,
       public duration:number,
       public enroledUsers:[],

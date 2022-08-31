@@ -15,5 +15,14 @@ addUser(newU){
 getUsers(){
   return this.http.get<User[]>(`${this.link}/`)
 }
+getUserById(id){
+  return this.http.get(`${this.link}/${id}`)
+}
+deleteUser(id){
+  return this.http.delete(`${this.link}/${id}`)
+}
+updateUser(newU){
+  return this.http.put(`${this.link}/update/${newU.id}`,newU)
+}
 
 }

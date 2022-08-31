@@ -5,7 +5,7 @@ import { Theme } from "./theme";
 export class Formation {
   
     constructor(
-      public _id: number,
+      public id: string,
       public title: string,
       public description: string,
       public duration:string,

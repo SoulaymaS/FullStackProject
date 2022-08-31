@@ -1,6 +1,7 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
-import { ThemeSerrviceService } from '../../services/theme-serrvice.service';
+import { ThemeSerrviceService } from 'src/app/services/theme-serrvice.service';
+
 
 @Component({
   selector: 'app-theme-list',
@@ -8,7 +9,7 @@ import { ThemeSerrviceService } from '../../services/theme-serrvice.service';
   styleUrls: ['./theme-list.component.css']
 })
 export class ThemeListComponent implements OnInit {
-   listoftheme=[];
+   listoftheme
    
   constructor(private ThemSer:ThemeSerrviceService, private router:Router) { }
 

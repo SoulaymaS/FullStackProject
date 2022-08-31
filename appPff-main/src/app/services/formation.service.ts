@@ -15,4 +15,14 @@ export class FormationService {
   getFormations(){
     return this.http.get<Formation[]>(`${this.link}/`)
   }
+  getFormationById(id){
+    return this.http.get(`${this.link}/${id}`)
+  }
+  deleteFormation(id){
+    return this.http.delete(`${this.link}/${id}`)
+  }
+  updateFormation(newF){
+    return this.http.put(`${this.link}/update/${newF.id}`,newF)
+  }
+
 }

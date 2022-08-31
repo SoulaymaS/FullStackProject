@@ -16,4 +16,13 @@ export class SessionServiceService {
   getSessions(){
     return this.http.get<Session[]>(`${this.link}/`)
   }
+  getSessionById(id){
+    return this.http.get(`${this.link}/${id}`)
+  }
+  deleteSession(id){
+    return this.http.delete(`${this.link}/${id}`)
+  }
+  updateSession(newS){
+    return this.http.put(`${this.link}/update/${newS.id}`,newS)
+  }
 }
