@@ -24,7 +24,5 @@ export class AddFormationComponent implements OnInit {
       console.log('probleme avec ajout formation')
     }
   });
-  
-  
  }
 }

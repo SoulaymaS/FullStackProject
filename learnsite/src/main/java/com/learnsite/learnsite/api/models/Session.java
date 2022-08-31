@@ -1,5 +1,4 @@
 package com.learnsite.learnsite.api.models;
-
 import java.util.Date;
 import java.util.List;
 
@@ -10,11 +9,23 @@ public class Session {
 private String id;
 private Date date;
 private String duration;
+private Boolean Status;
 //list of enrolled users
 private List<User> user;
 private Formation formation;
 
-
+public String getId() {
+	return id;
+}
+public void setId(String id) {
+	this.id = id;
+}
+public Boolean getStatus() {
+	return Status;
+}
+public void setStatus(Boolean status) {
+	Status = status;
+}
 //Getters and Setters
 public List<User> getUser() {
 	return user;

@@ -16,6 +16,7 @@ private String id;
 private String title;
 private String description;
 private String duration;
+@DBRef
 private Formateur formateur;
 //define list of sessions if available
 @DBRef

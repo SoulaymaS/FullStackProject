@@ -19,7 +19,7 @@ import com.learnsite.learnsite.api.models.Session;
 import com.learnsite.learnsite.api.repositories.SessionRepository;
 
 @RestController
-@RequestMapping("/Sessions")
+@RequestMapping("/sessions")
 public class SessionController {
 
 	@Autowired
@@ -74,6 +74,7 @@ public class SessionController {
 			Session _session = sessionData.get();
 			_session.setDate(session.getDate());
 			_session.setDuration(session.getDuration());
+			_session.setStatus(session.getStatus());
 			_session.setFormation(session.getFormation());
 			_session.setSessionStatus(session.isSessionStatus());
 			_session.setUser(session.getUser());

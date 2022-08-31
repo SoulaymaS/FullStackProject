@@ -90,7 +90,6 @@ public ResponseEntity<Formation> updateFormation(@PathVariable("id") String id, 
 }
 
 @DeleteMapping("/{id}")
-@PreAuthorize("hasRole('ADMIN')")
 public ResponseEntity<Formation> deleteFormation(@PathVariable("id") String id){
 	try {
 		repo.deleteById(id);

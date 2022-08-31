@@ -20,7 +20,7 @@ import com.learnsite.learnsite.api.models.Formation;
 import com.learnsite.learnsite.api.repositories.FormateurRepository;
 
 @RestController
-@RequestMapping("/Formateurs")
+@RequestMapping("/formateurs")
 public class FormateurController {
 	
 @Autowired

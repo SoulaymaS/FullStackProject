@@ -22,5 +22,4 @@ export class ThemeListComponent implements OnInit {
     }
     });
   }
-
 }
