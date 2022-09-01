@@ -4,13 +4,13 @@
       <span class="navbar-toggler-icon"></span>
     </button>
   
-  <div id="sec" class="container" >
-    <ul class="nav mx-auto " >
-      <li class="nav-item text-center">
+  <div id="sec" class="collapse navbar-collapse" id="navbarSupportedContent" >
+    <ul class="navbar-nav " >
+      <li class="nav-item ">
         <a class="nav-link" routerLink="acceuil" routerLinkActive="active">  Acceuil  </a>
       </li>
 
-      <li class="nav-item dropdown text-center" id="navbarTogglerDemo01">
+      <li class="nav-item dropdown " id="navbarTogglerDemo01">
         <a class="nav-link dropdown-toggle" routerLink="themes" routerLinkActive="active" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">  Thèmes  </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -20,7 +20,7 @@
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
       </li>
-      <li class="nav-item dropdown text-center">
+      <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" routerLink="formations" routerLinkActive="active" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">  Formation  </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -30,24 +30,33 @@
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
       </li>
-      <li class="nav-item text-center">
-        <a class="nav-link" routerLink="adminPage" routerLinkActive="active">  Admin  </a>
-      </li>
-      <li class="nav-item text-center">
+     
+      <li class="nav-item ">
         <a class="nav-link " routerLink="signup"  routerLinkActive="active">  Sign Up  </a>
       </li> 
-      <li class="nav-item text-center">
-        <a class="nav-link " routerLink="signin"  routerLinkActive="active">  Sign In  </a>
-      </li> 
       <li class="nav-item ">
         <a class="nav-link " routerLink="signin"  routerLinkActive="active">  Sign In  </a>
       </li> 
-      <li class="nav-item ">
-        <a class="nav-link " routerLink="profile"  routerLinkActive="active">  Profile  </a>
-      </li> 
-      <li class="nav-item ">
-        <a class="nav-link " routerLink="acceuil" onClick="toLogout()" routerLinkActive="active">  Logout </a>
-      </li> 
+    
+      
+      
+    </ul>
+
+  </div>
+
+  <div class="profileMenu" >
+    <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img src="https://www.freeiconspng.com/thumbs/profile-icon-png/account-profile-user-icon--icon-search-engine-10.png" alt="photo de profile" width="40" height="40" class="rounded-circle">
+        </a>
+        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" routerLink="adminPage"  ><i class="icon fa-solid fa-desktop "></i>Back office</a>
+          <a class="dropdown-item" routerLink="profile" ><i class="icon fa-solid fa-user"></i>Mon compte</a>
+          <a class="dropdown-item" routerLink="" ><span class="icon fa-solid fa-gear"></span>Paramètres</a>
+          <a class="dropdown-item" routerLink="acceuil" onClick="toLogout()"><i class="icon fa-solid fa-arrow-right-from-bracket"></i>Log Out</a>
+        </div>
+      </li>   
     </ul>
   </div>
 </nav>

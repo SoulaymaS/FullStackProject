@@ -1,5 +1,4 @@
 import { Component, OnInit, Output } from '@angular/core';
-import { Router } from '@angular/router';
 import { ThemeSerrviceService } from 'src/app/services/theme-serrvice.service';
 
 
@@ -11,7 +10,7 @@ import { ThemeSerrviceService } from 'src/app/services/theme-serrvice.service';
 export class ThemeListComponent implements OnInit {
    listoftheme
    
-  constructor(private ThemSer:ThemeSerrviceService, private router:Router) { }
+  constructor(private ThemSer:ThemeSerrviceService) { }
 
   ngOnInit(): void {
    this.ThemSer.getThemes().subscribe({

@@ -19,6 +19,7 @@
     text-decoration: underline;
     color: gray;
     float: right;
+    cursor: pointer;
   }
   .showLink:hover{
     color: black ;

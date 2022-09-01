@@ -15,6 +15,7 @@ import { UpdateThemeComponent } from './components/update-theme/update-theme.com
 import { UpdateSessionComponent } from './components/update-session/update-session.component';
 import { UpdateFormationComponent } from './components/update-formation/update-formation.component';
 import { UpdateUserComponent } from './components/update-user/update-user.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 
 

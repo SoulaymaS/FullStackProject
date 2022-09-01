@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {  Router } from '@angular/router';
 import { Formation } from 'src/app/models/formation';
+import { Session } from 'src/app/models/Session';
 import { FormationService } from 'src/app/services/formation.service';
 import { SessionServiceService } from 'src/app/services/session-service.service';
 
@@ -11,6 +12,7 @@ import { SessionServiceService } from 'src/app/services/session-service.service'
 })
 export class AddSessionComponent implements OnInit {
 listFormation:Formation[]
+listofsessions:Session[]
 show=false
   constructor(private FormSer: FormationService,
     private SessServ:SessionServiceService,
@@ -36,10 +38,34 @@ show=false
         console.log('probleme avec ajout session')
       }
     })
-  
+    this.SessServ.getSessions().subscribe({
+      next: (res)=> {
+        this.listofsessions= res;
+        console.log(res);
+      }, error: (err) =>{
+        console.log(err);
+      }
+    });
   
   
   }
+  SupprimerSession(id){
+    
+    if (confirm("etes vous sur de vouloir supprimer la session ?")){
+    
+      this.SessServ.deleteSession(id).subscribe({
+        next:(res)=>{
+          console.log(res);
+          this.router.navigateByUrl('/sessions');
+        },
+        error: (err) => {
+          console.log('probleme avec supprimer session')
+        }
+  
+      })
 
+
+    }
+  }
 
 }

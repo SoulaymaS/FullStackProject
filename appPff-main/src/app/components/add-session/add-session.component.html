@@ -22,5 +22,13 @@
         <span><a (click)="show = !show" class="showLink" >Afficher la liste des Sessions</a></span>
 </div>
 <section *ngIf="show">
-    <app-session-list></app-session-list>>
+    <div class="container">
+        <h3> Sessions </h3>
+    
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let s of listofsessions"> <i>{{ s.formation}} ||  {{s.date}} || {{s}}  <span><button [routerLink]="['/adminPage/updateSession/' ,s]" class="btn btnModifer">Modifier</button></span><span><button (click)="SupprimerSession(s)" class="btn btnSupprimer">Supprimer</button></span></i> </li>
+    
+    
+        </ul>
+    </div>
     </section>
