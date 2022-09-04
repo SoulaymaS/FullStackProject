@@ -1,11 +1,11 @@
-<nav class="navbar fixed-top  navbar-expand-lg  styleNavbar " (scroll)="onWindowScroll()">
+<nav class="navbar fixed-top  navbar-expand-lg   " (scroll)="onWindowScroll()">
   
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
   
   <div id="sec" class="collapse navbar-collapse" id="navbarSupportedContent" >
-    <ul class="navbar-nav " >
+    <ul class="navbar-nav mx-auto" >
       <li class="nav-item ">
         <a class="nav-link" routerLink="acceuil" routerLinkActive="active">  Acceuil  </a>
       </li>
@@ -51,9 +51,10 @@
           <img src="https://www.freeiconspng.com/thumbs/profile-icon-png/account-profile-user-icon--icon-search-engine-10.png" alt="photo de profile" width="40" height="40" class="rounded-circle">
         </a>
         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" routerLink="adminPage"  ><i class="icon fa-solid fa-desktop "></i>Back office</a>
           <a class="dropdown-item" routerLink="profile" ><i class="icon fa-solid fa-user"></i>Mon compte</a>
-          <a class="dropdown-item" routerLink="" ><span class="icon fa-solid fa-gear"></span>Paramètres</a>
+          <a class="dropdown-item" routerLink="" ><i class="icon fa-solid fa-gear"></i>Paramètres</a>
+          <a class="dropdown-item" routerLink="mesSessions"><i class="icon fa-solid fa-book"></i>Mes Sessions</a>
+          <a class="dropdown-item" routerLink="adminPage"  ><i class="icon fa-solid fa-desktop "></i>Back office</a>
           <a class="dropdown-item" routerLink="acceuil" onClick="toLogout()"><i class="icon fa-solid fa-arrow-right-from-bracket"></i>Log Out</a>
         </div>
       </li>   

@@ -9,7 +9,6 @@ export class Formateur {
       public prenom: string,
       public cin:number,
       public profession: string,
-      public formations:[Formation],
       public sessions:[Session]   
        ) {
 

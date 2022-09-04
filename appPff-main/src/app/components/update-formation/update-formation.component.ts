@@ -34,9 +34,13 @@ export class UpdateFormationComponent implements OnInit {
     this.ThemeServ.getThemes().subscribe({
       next:(res)=>{
         this.listTheme=res
+       
+        
        },
        
     })
+    
+    
   }
   modifFormation(newF){
     return this.FormServ.updateFormation(newF).subscribe({

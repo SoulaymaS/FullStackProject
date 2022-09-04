@@ -33,6 +33,9 @@ import { ListUsersComponent } from './components/list-users/list-users.component
 
 import { ProfileComponent } from './components/profile/profile.component';
 import { ThemeListComponent } from './components/theme-list/theme-list.component';
+import { DatePickerModule } from '@syncfusion/ej2-angular-calendars';
+import { SeprateListThemeComponent } from './components/seprate-list-theme/seprate-list-theme.component';
+import { MesSessionsComponent } from './components/mes-sessions/mes-sessions.component'; 
 
 @NgModule({
   declarations: [
@@ -59,13 +62,16 @@ import { ThemeListComponent } from './components/theme-list/theme-list.component
     SessionListComponent,
     ListUsersComponent,
     ProfileComponent,
+    SeprateListThemeComponent,
+    MesSessionsComponent,
 
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    DatePickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
