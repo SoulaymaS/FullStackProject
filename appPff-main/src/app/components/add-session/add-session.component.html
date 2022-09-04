@@ -1,6 +1,5 @@
 
-<div class="row position">
-    <div class="col-8">
+<section class="position">
         <h3> Ajouter une nouvelle session </h3>
         <form #f="ngForm" (ngSubmit)="addSession (f.value)">
             <label for="date">Date</label>
@@ -12,7 +11,7 @@
             <label for="formation">Formation</label><br>
             <select  ngModel  class="form-select form-control" >
                 <option selected>Choisir une formation</option>
-                <option *ngFor="let f of listFormation"  id="formation" name="formation" value={{f.Title}}> {{f.Title}} </option>  
+                <option *ngFor="let f of listFormation"  id="formation" name="formation" value={{f.title}}> {{f.title}} </option>  
              </select>
              <br>
 
@@ -20,15 +19,14 @@
             <button class="btn btn-primary">Ajouter</button>
         </form>
         <span><a (click)="show = !show" class="showLink" >Afficher la liste des Sessions</a></span>
-</div>
+</section>
+<br><br>
 <section *ngIf="show">
     <div class="container">
-        <h3> Sessions </h3>
+        <h3> Liste des sessions </h3>
     
         <ul class="list-group">
-            <li class="list-group-item" *ngFor="let s of listofsessions"> <i>{{ s.formation}} ||  {{s.date}} || {{s}}  <span><button [routerLink]="['/adminPage/updateSession/' ,s]" class="btn btnModifer">Modifier</button></span><span><button (click)="SupprimerSession(s)" class="btn btnSupprimer">Supprimer</button></span></i> </li>
-    
-    
+            <li class="list-group-item" *ngFor="let s of listofsessions"> <i>{{s.formation}}  {{s.date| date:'mediumDate'}}  {{s.sessionStatus}}<span><button [routerLink]="['/adminPage/updateSession/' ,s.id]" class="btn btnModifer">Modifier</button></span><span><button (click)="SupprimerSession(s.id)" class="btn btnSupprimer">Supprimer</button></span></i> </li>  
         </ul>
     </div>
     </section>

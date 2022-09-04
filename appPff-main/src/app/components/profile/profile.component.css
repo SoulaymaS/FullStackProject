@@ -1,8 +1,19 @@
-#profile{
+.position{
+    padding:  60px 10px 0; /* Height of navbar */;
+}
+/* #profile{
     margin: 10% 10% 10% 10%;
     padding-left: 5%;
     padding-top: 3%;
     border: 1px solid;
     border-radius: 20%;
     height: 200px;
+} */
+.title{
+    font-size: 3vw;
+    text-align: center;
+}
+.profileCard{
+    border-radius: 25px;
+    box-shadow: 2px 2px 2px 2px (255,255,255,255,0.8);
 }

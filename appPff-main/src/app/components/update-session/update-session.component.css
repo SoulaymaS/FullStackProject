@@ -2,3 +2,16 @@
     border-color: rgb(109, 203, 199);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgb(109, 203, 199, 0.8);
   }
+  .form-switch.form-switch-md {
+    margin-bottom: 1rem; /* JUST FOR STYLING PURPOSE */
+  }
+  
+  .form-switch.form-switch-md .form-check-input {
+    height: 1.5rem;
+    width: calc(2rem + 0.75rem);
+    border-radius: 3rem;
+  }
+  .form-switch-md:checked {
+    background-color:  rgb(109, 203, 199);
+  }
+  

@@ -11,33 +11,37 @@ import { ThemeSerrviceService } from 'src/app/services/theme-serrvice.service';
 export class UpdateThemeComponent implements OnInit {
    myTheme;
 
-  constructor(private ThemServ:ThemeSerrviceService, private router:Router, 
-    private activatedRoute:ActivatedRoute) { }
+  constructor(private ThemServ:ThemeSerrviceService, 
+    private activatedRoute:ActivatedRoute, private router:Router) { }
 
   ngOnInit(): void {
 
     this.activatedRoute.paramMap.subscribe({
       next: (p: ParamMap) => {
         this.ThemServ.getThemeById(p.get('id')).subscribe({
-          next: (response) => {
-            this.myTheme = response;
+          next: (res) => {
+            this.myTheme = res;
+            
           },
           error: (err) => {
+            console.log(err);
+            
             console.log('Probleme avec getThemeById');
           },
         });
       },
       error: (err) => {
+        console.log(err);
+        
         console.log('Probleme avec paramMap');
       },
     });
-
   }
-  modifTheme(newT){
-    return this.ThemServ.updateTheme(newT).subscribe({
+  modifTheme(){
+    return this.ThemServ.updateTheme(this.myTheme).subscribe({
       next:(res)=>{
         console.log(res);
-        this.router.navigateByUrl('/themes');
+        this.router.navigateByUrl('/adminPage/addTheme');
       },
       error: (err) => {
         console.log('probleme avec modifier thème')

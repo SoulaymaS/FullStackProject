@@ -1,10 +1,10 @@
 .styleNavbar{
     background-color: rgba(255,255,255,0);
-    height:15%;
+   
   
 }
 .scrollingstyle{
-    background-color: white;
+    background-color: rgba(255,255,255,0.8);
    
 }
 .navbar a{
@@ -40,6 +40,12 @@
     display: inline-block;
     margin-right: 7%;
     width: min-content;
+}
+.nav-item {
+    padding: 3%;
+}
+nav ul li a{
+    white-space:nowrap;
 }
 
 

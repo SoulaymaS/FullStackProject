@@ -4,20 +4,28 @@
         <h3> Modifier la session </h3>
         <form #f="ngForm" (ngSubmit)="modifSession (f.value)">
             <label for="date">Date</label>
-            <input [(ngModel)]="mySession.date"ngModel required type="date" class="form-control" id="date" name="date">
-
+            <input ngModel required type="Date" class="form-control" id="date" name="date">
+            
+  
             <label for="duration">Duration</label>
-            <input [(ngModel)]="mySession.duration"  ngModel type="text" class="form-control" id="duration" name="duration">
+            <input [(ngModel)]="mySession.duration"  ngModel type="number" class="form-control" id="duration" name="duration">
+           
+           
             
             <label for="formation">Formation</label><br>
-            <select  ngModel  class="form-select form-control" >
+            <select  ngModel name="formation"  class="form-select form-control"   >
                 <option [(ngModel)]="mySession.formation" selected></option>
-                <option *ngFor="let f of listFormation"  id="formation" name="formation" value={{f.Title}}> {{f.Title}} </option>  
+                <option *ngFor="let f of listFormation"  id="formation" value={{f.title}}> {{f.title}} </option>  
              </select>
              <br>
+             <div class="form-check form-switch form-switch-md">
+                <label class="form-check-label" for="sessionStatus">Statut</label>
 
+                <input class="form-check-input" [(ngModel)]="mySession.sessionStatus" ngModel type="checkbox" role="switch" id="sessionStatus" name="sessionStatus">
+              </div>
+              <br>
          
-            <button class="btn btn-primary">Modofier</button>
+            <button class="btn btn-primary">Modifier</button>
         </form>
     </div>
 </div>

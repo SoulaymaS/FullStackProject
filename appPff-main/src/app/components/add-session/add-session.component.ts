@@ -24,20 +24,8 @@ show=false
       next:(res)=>{
        this.listFormation=res
       },
+    })
 
-    })
-  }
-  addSession (newS){
-    console.log(newS);
-    this.SessServ.addSession(newS).subscribe({
-      next:(res)=>{
-        console.log(res);
-        this.router.navigateByUrl('/formation'); ///changer l'url à l'url de la iste des sessions une fois prete!!!!!!!
-      },
-      error: (err) => {
-        console.log('probleme avec ajout session')
-      }
-    })
     this.SessServ.getSessions().subscribe({
       next: (res)=> {
         this.listofsessions= res;
@@ -46,6 +34,20 @@ show=false
         console.log(err);
       }
     });
+    
+  }
+  addSession (newS){
+    console.log(newS);
+    this.SessServ.addSession(newS).subscribe({
+      next:(res)=>{
+        console.log(res);
+        this.router.navigateByUrl('/formations'); ///changer l'url à l'url de la iste des sessions une fois prete!!!!!!!
+      },
+      error: (err) => {
+        console.log('probleme avec ajout session')
+      }
+    })
+ 
   
   
   }

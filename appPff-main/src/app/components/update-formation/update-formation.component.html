@@ -11,9 +11,9 @@
         <label for="duration">Duration</label>
         <input  [(ngModel)]="myFormation.duration" ngModel type="text" class="form-control" id="duration" name="duration">
         <label for="formation">Thème</label><br>
-        <select  ngModel  class="form-select form-control" >
-            <option [(ngModel)]="myFormation.formation" selected></option>
-            <option *ngFor="let t of listTheme"  id="theme" name="theme" value={{f.titre}}> {{f.titre}} </option>  
+        <select  ngModel  name="theme"  class="form-select form-control" >
+            <option [(ngModel)]="myFormation.theme" selected></option>
+            <option *ngFor="let t of listTheme"  id="theme" value={{t.title}}> {{t.title}} </option>  
          </select>
          <br>
 

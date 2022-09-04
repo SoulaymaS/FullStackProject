@@ -29,7 +29,7 @@ export class UpdateSessionComponent implements OnInit {
             this.mySession = response;
           },
           error: (err) => {
-            console.log('Probleme avec getFormationById');
+            console.log('Probleme avec getSessionById');
           },
         });
       },
@@ -39,16 +39,20 @@ export class UpdateSessionComponent implements OnInit {
     });
   }
   modifSession (newS){
-    return this.SessServ.updateSession(newS).subscribe({
+    newS.id=this.mySession.id
+   
+     return this.SessServ.updateSession(newS).subscribe({
       next:(res)=>{
         console.log(res);
-        this.router.navigateByUrl('/sessions');
+        this.router.navigateByUrl('/adminPage/addSession');
       },
       error: (err) => {
         console.log('probleme avec modifier session')
       }
 
     })
+    
+// console.log(newS);
 
 }
 }

@@ -1,12 +1,13 @@
-<div class="row position">
-    <div class="col-8">
+<div class="position">
+   
         <h3> Modifier le thème </h3>
-        <form #f="ngForm"  (ngSubmit)="modifTheme(f.value)" >
+        <form #f="ngForm"  >
 
             <label for="title">Titre</label>
-            <input  ([ngModel])="myTheme.title" ngModel required type="text" class="form-control" id="title" name="title">
-
-            <button class="btn btn-primary">Modifier</button>
+            <input  ([ngModel])="myTheme.title"   type="text" class="form-control" id="title" >
+           
+            <br>
+            <button (click)="modifTheme()"  class="btn btn-primary">Modifier</button>
         </form>
-    </div>
+   
 </div>

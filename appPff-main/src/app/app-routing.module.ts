@@ -16,6 +16,8 @@ import { UpdateSessionComponent } from './components/update-session/update-sessi
 import { UpdateFormationComponent } from './components/update-formation/update-formation.component';
 import { UpdateUserComponent } from './components/update-user/update-user.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { SeprateListThemeComponent } from './components/seprate-list-theme/seprate-list-theme.component';
+import { MesSessionsComponent } from './components/mes-sessions/mes-sessions.component';
 
 
 
@@ -23,11 +25,13 @@ import { ProfileComponent } from './components/profile/profile.component';
 const routes: Routes = [
   {path:'', redirectTo: 'acceuil', pathMatch: 'full'},
   {path:'acceuil' , component:AcceuilComponent},
-  {path:'themes' , component:ThemeListComponent},
+  {path:'themes' , component:SeprateListThemeComponent},
   {path:'formations', component:FormationListComponent},
   {path:'signup', component:SignUpComponent},
   {path:'signin', component:SignInComponent},
   {path:'profile',component: ProfileComponent },
+  {path:'mesSessions',component:MesSessionsComponent },
+  
   {path: 'adminPage', component: DashboardComponent, 
    children:[
   {path:'addFormation', component:AddFormationComponent},
