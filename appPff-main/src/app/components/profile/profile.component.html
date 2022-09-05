@@ -4,39 +4,60 @@
   <h3 class="title">Mes informations personnelles</h3>
   <br>
   <hr>
-  <div class="container h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-lg-12 col-xl-11">
-        <div class="card text-black profileCard" >
-          <div class="card-body p-md-5">
-            <div class="row d-flex justify-content-center align-items-center">
-             
-              <div id="profile">
-                <div *ngIf="currentUser; else loggedOut">
-                  <header class="jumbotron">
-                    <h3>
-                      <strong>{{ currentUser.username }}</strong> Profile
-                    </h3>
-                  </header>
-                  <p>
-                    <strong>Email:</strong>
-                    {{ currentUser.email }}
-                  </p>
-                  <strong>Roles:</strong>
-                  <ul>
-                    <li *ngFor="let role of currentUser.roles">
-                      {{ role }}
-                    </li>
-                  </ul>
-                </div>
-              </div>
+  <div class="container-fluid h-100 ">
+    <div class="row d-flex justify-content-center align-items-center h-100 ">
+      <div class="container ">
+        <img class="profilImage" src="../../../assets/profilImg.jpg">
+        <div class="col-lg-6 col-xl-5 ">
+          <div class="card text-black profileCard">
+            <div class="card-body p-md-5">
+              <div class="row d-flex justify-content-center align-items-center">
 
-              <ng-template #loggedOut>
-                Please login.
-              </ng-template>
+                <div id="profile">
+                  <div *ngIf="currentUser; else loggedOut">
+                    <header class="jumbotron">
+                      <h3>
+                        Profile
+                      </h3>
+                      <hr>
+                    </header>
+                    <br>
+                    <h5 id="name">Hend Bsila{{ currentUser.username |titlecase }}</h5>
+                    <br>
+                    <div style="overflow-x:auto;">
+                      <table>
+                        <tr>
+                          <td><span>User name</span></td>
+                          <td><span id="username" style="text-align: center;">hendBsila{{ currentUser.username }}</span>
+                          </td>
+
+                        </tr>
+                        <tr>
+                          <td><span>Adresse mail</span></td>
+                          <td><span id="email">bsila.hend@gmail.com{{ currentUser.email }}</span></td>
+                        </tr>
+                        <tr>
+                          <td><strong>Roles</strong></td>
+                          <td>
+                            <ul>
+                              <li *ngFor="let role of currentUser.roles">
+                                {{ role }}
+                              </li>
+                            </ul>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <ng-template #loggedOut>
+                  Please login.
+                </ng-template>
+              </div>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </div>

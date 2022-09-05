@@ -25,7 +25,6 @@ export class AddStaffComponent implements OnInit {
     })
   }
   addStaff(newU){
-    if (newU.role=="formateur"){
           this.FormateurServ.addFormateur(newU).subscribe({
       next:(res)=>{
         console.log(res);
@@ -37,7 +36,7 @@ export class AddStaffComponent implements OnInit {
 
   })
 
-    }
+    
   }
 
   SupprimerFormateur(id){
@@ -58,6 +57,18 @@ export class AddStaffComponent implements OnInit {
 
     }
   }
+  addUser(newU){
+    this.UserServ.addUser(newU).subscribe({
+      next:(res)=>{
+        console.log(res);
+        // this.router.navigateByUrl('/acceuil'); 
+      },
+      error: (err) => {
+        console.log('probleme avec ajouter user')
+      } 
+
+  })
+}
 }
 
 

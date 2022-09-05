@@ -25,3 +25,10 @@
   .showLink:hover{
     color: black ;
   }
+  .btnSupprimer{
+    border-color:red;
+    color:red;
+    background-color: white;
+    margin-left: 1%;
+    float: right;
+}

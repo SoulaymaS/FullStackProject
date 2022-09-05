@@ -4,10 +4,10 @@
     <form #f="ngForm" (ngSubmit)="addTheme(f.value)">
         <label for="title">Titre</label>
         <input ngModel required type="text" class="form-control" id="title" name="title">
-        
+
         <label for="image">Image</label>
         <input ngModel type="url" class="form-control" id="image" name="image">
-        
+
         <label for="description">Description</label>
         <input ngModel type="text" class="form-control" id="description" name="description">
         <br>
@@ -20,11 +20,12 @@
     <div class="container">
         <h3> Thèmes</h3>
 
-        <ul class="list-group">
-            <li class="list-group-item" *ngFor="let t of listoftheme"> <i>{{ t.title}} <span><button
-                            [routerLink]="['/adminPage/updateTheme/' ,t.id]"
-                            class="btn btnModifer">Modifier</button></span><span><button (click)="supprimerTheme(t.id)"
-                            class="btn btnSupprimer">Supprimer</button></span></i> </li>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let t of listoftheme"> <i>{{ t.title}} <i class="btn-group"><span><button
+                                [routerLink]="['/adminPage/updateTheme/' ,t.id]"
+                                class="btn btnModifer">Modifier</button></span><span><button
+                            (click)="supprimerTheme(t.id)" class="btn btnSupprimer">Supprimer</button></span></i> </i>
+            </li>
 
         </ul>
     </div>

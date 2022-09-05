@@ -38,11 +38,11 @@
 <section *ngIf="show">
     <div class="container">
         <h3> Formations </h3>
-        <ul class="list-group">
+        <ul class="list-group list-group-flush">
             <li class="list-group-item" *ngFor="let f of listofFormation"> <i>{{ f.title}} || {{ f.description}}
-                    <span><button [routerLink]="['/adminPage/updateFormation/' ,f.id]"
+                   <i class="btn-group"> <span><button [routerLink]="['/adminPage/updateFormation/' ,f.id]"
                             class="btn btnModifer">Modifier</button></span><span><button (click)="SupprimerFormation(f.id)"
-                            class="btn btnSupprimer">Supprimer</button></span></i> </li>
+                            class="btn btnSupprimer">Supprimer</button></span></i></i> </li>
         </ul>
     </div>
 </section>
