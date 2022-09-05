@@ -6,7 +6,10 @@ body {
     padding-left: 240px;
     }
     }
-    
+    .adminDashboard{
+        height: 100%;
+    }
+
     /* Sidebar */
     .sidebar {
 

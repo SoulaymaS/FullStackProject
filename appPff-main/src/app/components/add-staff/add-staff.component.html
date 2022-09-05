@@ -1,6 +1,6 @@
-<section class="position">
+<section>
 
-    <h3> Ajouter un nouveau menmbre</h3>
+    <h3> Ajouter un nouveau membre</h3>
     <form #f="ngForm" (ngSubmit)="addStaff(f.value)">
         <label class="form-label" for="nom">Nom</label>
         <input #nom="ngModel" ngModel required minlength="2" maxlength="15" type="text" id="nom" class="form-control"
