@@ -29,7 +29,6 @@ public class FormationController {
 @Autowired
 private FormationRepository repo;
 @PostMapping("/add")
-@PreAuthorize("hasRole('ADMIN')")
 public ResponseEntity<Formation> addFormation(@RequestBody Formation formation) {
 	try {
 	repo.save(formation);
@@ -79,7 +78,6 @@ public ResponseEntity<Formation> updateFormation(@PathVariable("id") String id, 
 		Formation _formation = formationData.get();
 		_formation.setTitle(formation.getTitle());
 		_formation.setDescription(formation.getDescription());
-		_formation.setDuration(formation.getDuration());
 	    _formation.setFormateur(formation.getFormateur());
 		_formation.setSession(formation.getSession());
 		repo.save(_formation);

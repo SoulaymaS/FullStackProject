@@ -15,12 +15,11 @@ public class Formation {
 private String id;
 private String title;
 private String description;
-private String duration;
 @DBRef
 private Formateur formateur;
 //define list of sessions if available
 @DBRef
-private List<Session> session;
+private List<Session> sessions;
 //define theme
 @DBRef
 private Theme theme;
@@ -44,12 +43,7 @@ public String getDescription() {
 public void setDescription(String description) {
 	this.description = description;
 }
-public String getDuration() {
-	return duration;
-}
-public void setDuration(String duration) {
-	this.duration = duration;
-}
+
 public Formateur getFormateur() {
 	return formateur;
 }
@@ -58,10 +52,10 @@ public void setFormateur(Formateur formateur) {
 }
 
 public List<Session> getSession() {
-	return session;
+	return sessions;
 }
 public void setSession(List<Session> session) {
-	this.session = session;
+	this.sessions = session;
 }
 public Theme getTheme() {
 	return theme;

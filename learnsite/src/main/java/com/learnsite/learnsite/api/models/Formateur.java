@@ -5,14 +5,16 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection ="Formateurs")
+@Document(collection ="formateurs")
 public class Formateur {
 @Id
 private String id;
 private String nom;
 private String prenom;
+private String username;
 private String cin;
 private String profession;
+
 @DBRef
 private Session session;
 
@@ -52,6 +54,12 @@ public String getProfession() {
 }
 public void setProfession(String profession) {
 	this.profession = profession;
+}
+public String getUsername() {
+	return username;
+}
+public void setUsername(String username) {
+	this.username = username;
 }
 
 }

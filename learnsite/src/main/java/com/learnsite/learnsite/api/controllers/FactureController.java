@@ -72,8 +72,7 @@ public ResponseEntity<Facture> updateFormation(@PathVariable("id") String id, @R
 	Optional<Facture> factureData= repo.findById(id);
 	if (factureData.isPresent()) {
 		Facture _facture = factureData.get();
-	    _facture.setNumber(facture.getNumber());
-	    _facture.setTotal(facture.getTotal());
+	    _facture.setSomme(facture.getSomme());
 		_facture.setFormateur(facture.getFormateur());
 		_facture.setStatus(facture.isStatus());
 		repo.save(_facture);

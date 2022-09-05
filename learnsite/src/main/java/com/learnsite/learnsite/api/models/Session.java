@@ -9,7 +9,7 @@ public class Session {
 private String id;
 private Date date;
 private String duration;
-private Boolean Status;
+private Boolean status;
 //list of enrolled users
 private List<User> user;
 private Formation formation;
@@ -20,11 +20,12 @@ public String getId() {
 public void setId(String id) {
 	this.id = id;
 }
+
 public Boolean getStatus() {
-	return Status;
+	return status;
 }
 public void setStatus(Boolean status) {
-	Status = status;
+	this.status = status;
 }
 //Getters and Setters
 public List<User> getUser() {
