@@ -3,6 +3,7 @@ import java.util.Date;
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 
 public class Session {
 @Id
@@ -10,8 +11,16 @@ private String id;
 private Date date;
 private String duration;
 private Boolean status;
+private Float prix;
+public Float getPrix() {
+	return prix;
+}
+public void setPrix(Float prix) {
+	this.prix = prix;
+}
 //list of enrolled users
 private List<User> user;
+@DBRef
 private Formation formation;
 
 public String getId() {

@@ -15,7 +15,7 @@ addFormateur(newF){
   return this.http.post(`${this.link}/add`,newF);
 }
 getFormateurs(){
-  return this.http.get<Formateur[]>(`${this.link}/`)
+  return this.http.get(`${this.link}/`)
 }
 getFormateurById(id){
   return this.http.get(`${this.link}/${id}`)

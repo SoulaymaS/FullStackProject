@@ -23,6 +23,7 @@ export class AddFormationComponent implements OnInit {
   ngOnInit(): void {
     this.ThemeServ.getThemes().subscribe({
       next: (res) => {
+        console.log(res);
         this.listTheme = res
       },
 
@@ -30,9 +31,11 @@ export class AddFormationComponent implements OnInit {
 
     this.FormateurServ.getFormateurs().subscribe({
       next: (res) => {
-        this.listFormateur = res // il faut ajouter un filtre sur les user avec role formateur !!!!
-        console.log(res)
-      },
+        console.log(res);
+        this.listFormateur = res;
+    }, error: (err) => {
+      console.log(err);
+    }
     }),
    
      this.formServ.getFormations().subscribe({

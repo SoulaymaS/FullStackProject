@@ -11,7 +11,7 @@ private String id;
 @DBRef
 private Formateur formateur;
 private float somme; 
-private float price; 
+private float price; //prix par heure
 private boolean status; // true : payed, false: unpaid 
 
 

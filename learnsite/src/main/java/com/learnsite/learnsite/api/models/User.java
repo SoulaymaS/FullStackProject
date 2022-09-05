@@ -32,6 +32,7 @@ public User(String username, String email, String password) {
     this.email = email;
     this.password = password;
   }
+
 //Getters and Setters
 
 public String getEmail() {
