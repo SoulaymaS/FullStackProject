@@ -14,6 +14,36 @@
     text-align: center;
 }
 .profileCard{
-    border-radius: 25px;
-    box-shadow: 2px 2px 2px 2px (255,255,255,255,0.8);
+    border-radius: 10px;
+    /* box-shadow: 2px 2px 2px 2px rgba(255, 255, 255,0.8); */
+    height: 60vh;
+    border-color: white;
 }
+.profilImage{
+    width: 55%;
+    height: 70vh;
+    float: right;
+    
+}
+#profile h3{
+    font-size: 4vh;
+    text-align: center;
+}
+
+#profile #name{
+    font-size: 4vh;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+table{
+   width: 80%;
+   float: right;
+}
+td{
+    text-align: left;
+    font-size: 1.4rem
+}
+
+

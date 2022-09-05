@@ -1,52 +1,54 @@
 body {
     background-color: #fbfbfb;
-    }
-    @media (min-width: 991.98px) {
-    main {
-    padding-left: 240px;
-    }
-    }
-    .adminDashboard{
-        height: 100%;
-    }
+}
 
-    /* Sidebar */
-    .sidebar {
+@media (min-width: 991.98px) {
+    main {
+        padding-left: 240px;
+    }
+}
+
+
+/* Sidebar */
+.sidebar {
 
     top: 0;
     bottom: 0;
     left: 0;
-    padding: 50px 10px 0; /* Height of navbar */
-    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+    padding: 50px 10px 0;
+    /* Height of navbar */
+    box-shadow: 0px 0px 5px 0px rgb(0 0 0 / 5%), 0px 0px 10px 0px rgb(0 0 0 / 5%);
     width: 340px;
     z-index: 600;
-    }
-    
-  
-    .sidebar .active {
+}
+
+
+.sidebar .active {
     border-radius: 5px;
     box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
-    }
-    
-    .sidebar-sticky {
-    position: relative;
+}
+
+.position-sticky {
+    position: static;
     top: 0;
-    height: calc(100vh - 48px);
-    padding-top: 0.5rem;
-    overflow-x: hidden;
-    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-    }
-    .active{
-        background-color: rgb(109, 203, 199);
-        border-color: rgb(109, 203, 199);
-    }
-    .active:hover{
-        background-color: rgb(109, 203, 199,0.8);
-        border-color: rgb(109, 203, 199,0.8);
-        color: black;
-    }
-    @media (max-width: 991.98px) {
-        .sidebar {
+    height: 70vh;
+    /* Scrollable contents if viewport is shorter than content. */
+   
+}
+
+.active {
+    background-color: rgb(109, 203, 199);
+    border-color: rgb(109, 203, 199);
+}
+
+.active:hover {
+    background-color: rgb(109, 203, 199, 0.8);
+    border-color: rgb(109, 203, 199, 0.8);
+    color: black;
+}
+
+@media (max-width: 991.98px) {
+    .sidebar {
         width: 100%;
-        }
-        }
+    }
+}

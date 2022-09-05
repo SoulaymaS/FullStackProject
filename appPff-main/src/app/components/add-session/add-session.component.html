@@ -25,8 +25,9 @@
     <div class="container">
         <h3> Liste des sessions </h3>
     
-        <ul class="list-group">
-            <li class="list-group-item" *ngFor="let s of listofsessions"> <i>{{s.formation}}  {{s.date| date:'mediumDate'}}  {{s.sessionStatus}}<span><button [routerLink]="['/adminPage/updateSession/' ,s.id]" class="btn btnModifer">Modifier</button></span><span><button (click)="SupprimerSession(s.id)" class="btn btnSupprimer">Supprimer</button></span></i> </li>  
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let s of listofsessions"> <i >{{s.formation}}  {{s.date| date:'mediumDate'}}  {{s.sessionStatus}}<i class="btn-group"><span>
+                <button [routerLink]="['/adminPage/updateSession/' ,s.id]" class="btn btnModifer">Modifier</button></span><span><button (click)="SupprimerSession(s.id)" class="btn btnSupprimer">Supprimer</button></span></i></i> </li>  
         </ul>
     </div>
     </section>
