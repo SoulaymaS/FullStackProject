@@ -9,10 +9,11 @@ import { TokenStorageService } from './../../services/token-storage.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
+currentUser
   constructor(private token:TokenStorageService) { }
 
   ngOnInit(): void {
+    this.currentUser = this.token.getUser();
   }
 
 toLogout(){

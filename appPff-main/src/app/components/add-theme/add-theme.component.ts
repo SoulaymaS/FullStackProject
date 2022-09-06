@@ -9,19 +9,11 @@ import { ThemeSerrviceService } from 'src/app/services/theme-serrvice.service';
   styleUrls: ['./add-theme.component.css']
 })
 export class AddThemeComponent implements OnInit {
-  show=false
   listoftheme
   constructor(private ThemSer:ThemeSerrviceService, private router : Router) { }
 
   ngOnInit(): void {
-    this.ThemSer.getThemes().subscribe({
-
-      next:(res)=>{
-      this.listoftheme=res
-       
-      }
-  
-      })
+   
   }
 
   addTheme(newT){
@@ -36,23 +28,5 @@ export class AddThemeComponent implements OnInit {
       }
     });
    }
-   supprimerTheme(id){
-    if (confirm("etes vous sur de vouloir supprimer le thème ?")){
-      
-      this.ThemSer.deleteTheme(id).subscribe({
-        next:(res)=>{
-          console.log(res);
-          this.router.navigateByUrl('/themes');
-        },
-        error: (err) => {
-          console.log('probleme avec supprimer theme')
-        }
-  
-      })
-    }
 
-  
-
-
-  }
 }

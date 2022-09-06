@@ -12,14 +12,18 @@
         <input  [(ngModel)]="myFormation.duration" ngModel type="text" class="form-control" id="duration" name="duration">
         <label for="formation">Thème</label><br>
         <select  ngModel  name="theme"  class="form-select form-control" >
-            <option [(ngModel)]="myFormation.theme" selected></option>
-            <option *ngFor="let t of listTheme"  id="theme" value={{t.title}}> {{t.title}} </option>  
+            <option [(ngModel)]="myFormation.theme.title" selected></option>
+            <option *ngFor="let t of listTheme"  id="theme" value={{t}}> {{t.title}} </option>  
+         </select>
+         <label for="formateur">Formateur</label><br>
+         <select ngModel [(ngModel)]="myFormation.formateur.nom" name="formateur" class="form-select form-control">
+             <option *ngFor="let f of listFormateur" id="formateur"  value={{f}}> {{f.nom|uppercase}} {{f.prenom  | titlecase}} </option>
          </select>
          <br>
 
        
 
-        <button class="btn btn-primary">Modifier</button>
+        <button class="btn btnModifer">Modifier</button>
     </form>
 
 </div>

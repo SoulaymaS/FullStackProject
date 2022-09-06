@@ -18,6 +18,16 @@
             <p *ngIf="prenom.errors.minlength">Prènom invalide</p>
 
         </div>
+        <label class="form-label" for="username">Username</label>
+        <input #username="ngModel" ngModel required minlength="3" maxlength="15"
+        type="text" id="username" class="form-control" name="username" />
+   
+        <div *ngIf="(username.touched || f.submitted)&&username.invalid"
+        class="alert-danger">
+        <p *ngIf="username.errors.required">Ce champs est obligatoire</p>
+        <p *ngIf="username.errors.minlength">Username invalide</p>
+
+    </div>
         <label class="form-label" for="cin">CIN</label>
         <input [pattern]="cinPtn" #cin="ngModel" ngModel required  maxLength="8" type="number" id="cin"
             class="form-control" name="cin" />
@@ -89,30 +99,18 @@
 
         <label class="form-label" for="role">Ajouter un role</label><br>
 
-        <select #role="ngModel" ngModel required class="form-select form-control" name="role">
+        <select *ngFor="let r of listofRoles"   ngModel #role="ngModel" name="role" required class="form-select form-control" id="role">
 
-            <option id="admin" name="admin" value="admin"> Administrateur</option>
-            <option id="formateur" name="formateur" value="formateur"> Formateur</option>
+            <option   value="{{r}}">{{r.name}}</option>
+           
         </select>
-        <div *ngIf="(role.touched|| u.submitted)&&role.invalid" class="alert-danger">
+        <!-- <div *ngIf="(role.touched || u.submitted)&&role.invalid" class="alert-danger">
             <p *ngIf="role.errors.required">Ce champs est obligatoire</p>
 
-        </div>
+        </div> -->
         <br>
         <button class="btn btn-primary">Ajouter</button>
     </form>
-    <span><a (click)="show = !show" class="showLink">Afficher la liste des Formateurs</a></span>
+   
 </section>
 <br><br>
-<section *ngIf="show">
-    <div class="container-fluid">
-        <h3> Liste des Formateurs </h3>
-
-        <ul class="list-group">
-            <li class="list-group-item" *ngFor="let f of listofFormateurs"> <i>{{ f.nom |uppercase}} {{f.prenom |
-                    titlecase}} <span><button (click)="SupprimerFormateur(f.id)"
-                            class="btn btnSupprimer " >Supprimer</button></span></i> </li>
-        </ul>
-    </div>
-    <br><br>
-</section>

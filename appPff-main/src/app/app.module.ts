@@ -1,11 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AcceuilComponent } from './components/acceuil/acceuil.component';
-
-import { CardComponent } from './components/card/card.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -20,29 +17,26 @@ import { FooterComponent } from './components/footer/footer.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AddStaffComponent } from './components/add-staff/add-staff.component';
 import { UpdateFormationComponent } from './components/update-formation/update-formation.component';
-
-
 import { UpdateUserComponent } from './components/update-user/update-user.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { UpdateThemeComponent } from './components/update-theme/update-theme.component';
 import { SessionListComponent } from './components/session-list/session-list.component';
 import { UpdateSessionComponent } from './components/update-session/update-session.component';
 import { ListUsersComponent } from './components/list-users/list-users.component';
-
-
-
 import { ProfileComponent } from './components/profile/profile.component';
 import { ThemeListComponent } from './components/theme-list/theme-list.component';
 import { DatePickerModule } from '@syncfusion/ej2-angular-calendars';
 import { SeprateListThemeComponent } from './components/seprate-list-theme/seprate-list-theme.component';
-import { MesSessionsComponent } from './components/mes-sessions/mes-sessions.component'; 
+import { MesSessionsComponent } from './components/mes-sessions/mes-sessions.component';
+import { DashListThemeComponent } from './components/dash-list-theme/dash-list-theme.component';
+import { DashListFormationComponent } from './components/dash-list-formation/dash-list-formation.component';
+import { DashListSessionComponent } from './components/dash-list-session/dash-list-session.component'; 
 
 @NgModule({
   declarations: [
     AppComponent,
     AcceuilComponent,
     ThemeListComponent,
-    CardComponent,
     NavbarComponent,
     CarouselComponent,
     FormationListComponent,
@@ -64,6 +58,9 @@ import { MesSessionsComponent } from './components/mes-sessions/mes-sessions.com
     ProfileComponent,
     SeprateListThemeComponent,
     MesSessionsComponent,
+    DashListThemeComponent,
+    DashListFormationComponent,
+    DashListSessionComponent,
 
   ],
   imports: [

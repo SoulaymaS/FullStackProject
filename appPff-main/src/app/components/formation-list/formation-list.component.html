@@ -22,7 +22,7 @@
             <div class="card-body">
               <h5 class="card-title">{{f.title}}</h5>
               <p class="card-text">{{f.description}}.</p>
-              <a href="#" class="btn btn-primary">Session à venir</a>
+              <a [routerLink]="['/sessions/', f.id]" class="btn btn-warning">Session à venir</a>
             </div>
           </div>
     </div>
