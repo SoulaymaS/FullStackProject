@@ -10,14 +10,12 @@ import { TokenStorageService } from './../../services/token-storage.service';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private token:TokenStorageService) { }
+  constructor(private token:TokenStorageService, public logSer: LoginServiceService) { }
 
   ngOnInit(): void {
   }
 
-toLogout(){
-this.token.signOut();
-}
+
 @HostListener('window:scroll', ['$event'])
 
 onWindowScroll() {
@@ -28,5 +26,7 @@ onWindowScroll() {
       element.classList.remove('scrollingstyle');
     }
   }
-
+  toLogout(){
+    this.logSer.tologout();
+    }
 }

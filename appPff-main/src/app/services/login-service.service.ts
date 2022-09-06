@@ -23,8 +23,16 @@ export class LoginServiceService {
     return this.http.post(AUTH_API + 'signup', user, httpOptions);
   }
 
- isLogedIn(){
+ isLoggedIn(){
+  let token =  window.sessionStorage.getItem('auth-user');
+  if (token) return true;
+  else return false;
 
+ }
+ tologout(){
+  window.sessionStorage.removeItem('auth-user');
+  localStorage.removeItem('auth-user');
+  
  }
 
 

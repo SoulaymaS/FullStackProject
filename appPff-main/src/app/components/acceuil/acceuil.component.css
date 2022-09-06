@@ -14,7 +14,9 @@ img{
 h1{
     text-align: center;    
 }
-
+.sectionImage{
+    height: 80vh;
+}
 
 #photo{
     width:50%; 
