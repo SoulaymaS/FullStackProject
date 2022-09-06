@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { FormationService } from 'src/app/services/formation.service';
 import { SessionServiceService } from 'src/app/services/session-service.service';
 
@@ -10,10 +10,31 @@ import { SessionServiceService } from 'src/app/services/session-service.service'
 })
 export class SessionListComponent implements OnInit {
  
-  constructor() { }
-
+  constructor(private FormServ: FormationService, private activatedRoute:ActivatedRoute ) { }
+  listsessions
+  listformations
   ngOnInit(): void {
-      
+    this.activatedRoute.paramMap.subscribe({
+      next: (p: ParamMap) => {
+        this.FormServ.getFormationById(p.get('id')).subscribe({
+          next: (response) => {
+            this.listformations= response
+            console.log(this.listformations);
+            this.listsessions=this.listformations.sessions
+          },
+          error: (err) => {
+            console.log('Probleme avec getFormationById');
+          },
+        });
+      },
+      error: (err) => {
+        console.log('Probleme avec paramMap');
+      },
+    });
+
+    
+
+
   
   }
 

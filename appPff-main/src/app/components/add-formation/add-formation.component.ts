@@ -15,7 +15,6 @@ import { FormateurServiceService } from 'src/app/services/formateur-service.serv
 export class AddFormationComponent implements OnInit {
 
   constructor(private formServ: FormationService, private router: Router, private ThemeServ: ThemeSerrviceService, private FormateurServ: FormateurServiceService) { }
-  show = false
   listTheme
   listFormateur
   listofFormation
@@ -60,22 +59,5 @@ export class AddFormationComponent implements OnInit {
     });
   }
 
-  SupprimerFormation(id) {
 
-    if (confirm("etes vous sur de vouloir supprimer la formation ?")) {
-
-      this.formServ.deleteFormation(id).subscribe({
-        next: (res) => {
-          console.log(res);
-          this.router.navigateByUrl('/formations');
-        },
-        error: (err) => {
-          console.log('probleme avec supprimer formation')
-        }
-
-      })
-
-
-    }
-  }
 }

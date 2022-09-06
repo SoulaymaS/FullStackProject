@@ -9,8 +9,11 @@
       <li class="nav-item ">
         <a class="nav-link" routerLink="acceuil" routerLinkActive="active">  Acceuil  </a>
       </li>
+      <li class="nav-item ">
+        <a class="nav-link" routerLink="themes"  routerLinkActive="active">  Thèmes </a>
+      </li>
 
-      <li class="nav-item dropdown " id="navbarTogglerDemo01">
+      <!-- <li class="nav-item dropdown " id="navbarTogglerDemo01">
         <a class="nav-link dropdown-toggle" routerLink="themes" routerLinkActive="active" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">  Thèmes  </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -19,8 +22,11 @@
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
+      </li> -->
+      <li class="nav-item ">
+        <a class="nav-link" routerLink="formations" routerLinkActive="active">  Formations </a>
       </li>
-      <li class="nav-item dropdown">
+      <!-- <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" routerLink="formations" routerLinkActive="active" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">  Formation  </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -29,7 +35,7 @@
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
-      </li>
+      </li> -->
      
       <li class="nav-item ">
         <a class="nav-link " routerLink="signup"  routerLinkActive="active">  Sign Up  </a>
@@ -37,9 +43,6 @@
       <li class="nav-item ">
         <a class="nav-link " routerLink="signin"  routerLinkActive="active">  Sign In  </a>
       </li> 
-    
-      
-      
     </ul>
 
   </div>
@@ -53,7 +56,7 @@
         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" routerLink="profile" ><i class="icon fa-solid fa-user"></i>Mon compte</a>
           <a class="dropdown-item" routerLink="" ><i class="icon fa-solid fa-gear"></i>Paramètres</a>
-          <a class="dropdown-item" routerLink="mesSessions"><i class="icon fa-solid fa-book"></i>Mes Sessions</a>
+          <a class="dropdown-item" [routerLink]="['mesSessions/' ,currentUser.id]"><i class="icon fa-solid fa-book"></i>Mes Sessions</a>
           <a class="dropdown-item" routerLink="adminPage"  ><i class="icon fa-solid fa-desktop "></i>Back office</a>
           <a class="dropdown-item" routerLink="acceuil" onClick="toLogout()"><i class="icon fa-solid fa-arrow-right-from-bracket"></i>Log Out</a>
         </div>

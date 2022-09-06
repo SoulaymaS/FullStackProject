@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormateurServiceService } from 'src/app/services/formateur-service.service';
+import { RoleServiceService } from 'src/app/services/role-service.service';
 import { UserServiceService } from 'src/app/services/user-service.service';
 
 @Component({
@@ -12,14 +13,29 @@ export class AddStaffComponent implements OnInit {
   regArry:any={}
   passwordPtn ='^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,16}$'
   cinPtn='[0-9]{8}'
-  show=false
   listofFormateurs
-  constructor(private UserServ:UserServiceService, private FormateurServ:FormateurServiceService,private router:Router) { }
+  listofUsers
+  listofRoles
+  constructor(private UserServ:UserServiceService, private FormateurServ:FormateurServiceService,private router:Router, private RoleServ:RoleServiceService) { }
 
   ngOnInit(): void {
     this.FormateurServ.getFormateurs().subscribe({
       next:(res)=>{
        this.listofFormateurs=res
+      },
+
+    })
+    this.UserServ.getUsers().subscribe({
+      next:(res)=>{
+       this.listofUsers=res
+      },
+
+    })
+    this.RoleServ.getRoles().subscribe({
+      next:(res)=>{
+       this.listofRoles=res
+       console.log(this.listofRoles);
+       
       },
 
     })

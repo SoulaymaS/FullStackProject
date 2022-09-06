@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ThemeSerrviceService } from 'src/app/services/theme-serrvice.service';
+import { SessionServiceService } from 'src/app/services/session-service.service';
+
 
 @Component({
   selector: 'app-carousel',
@@ -7,16 +8,21 @@ import { ThemeSerrviceService } from 'src/app/services/theme-serrvice.service';
   styleUrls: ['./carousel.component.css']
 })
 export class CarouselComponent implements OnInit {
- imageList=[]
-  constructor(private ThemSer:ThemeSerrviceService) { }
+  sessionList
+
+  constructor(private SessServ:SessionServiceService) { }
 
   ngOnInit(): void {
+    this.SessServ.getSessions().subscribe({
+      next: (res) => {
+        console.log(res);
+        this.sessionList=res
+      },
+      error: (err) => {
+        console.log('probleme avec get session caroussel')
+      }
 
-    // this.ThemSer.listTemes.forEach(t => {
-    //   this.imageList.push(t.image)
-    // });
-    // console.log(this.imageList);
-    
+    })
   }
 
 }

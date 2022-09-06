@@ -1,0 +1,15 @@
+.btnModifer{
+    border-color: rgb(109, 203, 199);
+    color:rgb(109, 203, 199);
+    background-color: white;
+}
+.btnSupprimer{
+    border-color:red;
+    color:red;
+    background-color: white;
+    margin-left: 5%;
+}
+.btn-group{
+  float: right;
+
+}

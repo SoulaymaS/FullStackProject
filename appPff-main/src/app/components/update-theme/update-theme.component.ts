@@ -21,6 +21,8 @@ export class UpdateThemeComponent implements OnInit {
         this.ThemServ.getThemeById(p.get('id')).subscribe({
           next: (res) => {
             this.myTheme = res;
+            console.log(this.myTheme);
+            
             
           },
           error: (err) => {
@@ -37,8 +39,8 @@ export class UpdateThemeComponent implements OnInit {
       },
     });
   }
-  modifTheme(){
-    return this.ThemServ.updateTheme(this.myTheme).subscribe({
+  modifTheme(newT){
+    return this.ThemServ.updateTheme(newT).subscribe({
       next:(res)=>{
         console.log(res);
         this.router.navigateByUrl('/adminPage/addTheme');
