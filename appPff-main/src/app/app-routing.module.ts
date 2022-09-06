@@ -18,6 +18,10 @@ import { UpdateUserComponent } from './components/update-user/update-user.compon
 import { ProfileComponent } from './components/profile/profile.component';
 import { SeprateListThemeComponent } from './components/seprate-list-theme/seprate-list-theme.component';
 import { MesSessionsComponent } from './components/mes-sessions/mes-sessions.component';
+import { SessionListComponent } from './components/session-list/session-list.component';
+import { DashListThemeComponent } from './components/dash-list-theme/dash-list-theme.component';
+import { DashListSessionComponent } from './components/dash-list-session/dash-list-session.component';
+import { DashListFormationComponent } from './components/dash-list-formation/dash-list-formation.component';
 
 
 
@@ -27,10 +31,12 @@ const routes: Routes = [
   {path:'acceuil' , component:AcceuilComponent},
   {path:'themes' , component:SeprateListThemeComponent},
   {path:'formations', component:FormationListComponent},
+  {path:'sessions/:id',component:SessionListComponent},
   {path:'signup', component:SignUpComponent},
   {path:'signin', component:SignInComponent},
   {path:'profile',component: ProfileComponent },
-  {path:'mesSessions',component:MesSessionsComponent },
+  {path:'mesSessions/:id',component:MesSessionsComponent },
+  
   
   {path: 'adminPage', component: DashboardComponent, 
    children:[
@@ -38,10 +44,16 @@ const routes: Routes = [
   {path:'addTheme', component:AddThemeComponent},
   {path:'addSession',component:AddSessionComponent },
   {path:'gestEquipe',component:AddStaffComponent},
-  {path:'updateTheme/:id',component:UpdateThemeComponent},
-  {path:'updateSession/:id',component:UpdateSessionComponent},
-  {path:'updateFormation/:id',component:UpdateFormationComponent},
-  {path:'updateSession/:id',component:UpdateUserComponent}
+  {path:'updateTheme',component:DashListThemeComponent,children:[
+    {path:':id',component:UpdateThemeComponent},
+  ]},
+  {path:'updateSession',component:DashListSessionComponent, children:[
+    {path:':id',component:UpdateSessionComponent},
+  ]},
+  {path:'updateFormation',component:DashListFormationComponent, children:[
+    {path:':id',component:UpdateFormationComponent},
+  ]},
+  {path:'updateUser',component:UpdateUserComponent}
  
  ]}
 ];

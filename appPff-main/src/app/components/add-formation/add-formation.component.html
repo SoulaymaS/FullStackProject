@@ -12,14 +12,14 @@
         <label for="duration">Duration</label>
         <input ngModel type="text" class="form-control" id="duration" name="duration">
         <label for="theme">Thème</label><br>
-        <select ngModel class="form-select form-control">
+        <select ngModel name="theme" class="form-select form-control">
             <option selected>Choisir un thème</option>
-            <option *ngFor="let t of listTheme" id="theme" name="theme" value={{t.title}}> {{t.title}} </option>
+            <option *ngFor="let t of listTheme" id="theme"  value={{t}}> {{t.title}} </option>
         </select>
         <label for="formateur">Formateur</label><br>
-        <select ngModel class="form-select form-control">
+        <select ngModel name="formateur" class="form-select form-control">
             <option selected>Choisir un formateur</option>
-            <option *ngFor="let f of listFormateur" id="formateur" name="formateur" value={{f.nom}}> {{f.nom|uppercase}} {{f.prenom  | titlecase}} </option>
+            <option *ngFor="let f of listFormateur" id="formateur"  value={{f}}> {{f.nom|uppercase}} {{f.prenom  | titlecase}} </option>
         </select>
         <br>
 
@@ -32,17 +32,6 @@
 
         <button class="btn btn-primary">Ajouter</button>
     </form>
-    <span><a (click)="show = !show" class="showLink">Afficher la liste des formations</a></span>
+    
 </section>
 <br><br>
-<section *ngIf="show">
-    <div class="container">
-        <h3> Formations </h3>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item" *ngFor="let f of listofFormation"> <i>{{ f.title}} || {{ f.description}}
-                   <i class="btn-group"> <span><button [routerLink]="['/adminPage/updateFormation/' ,f.id]"
-                            class="btn btnModifer">Modifier</button></span><span><button (click)="SupprimerFormation(f.id)"
-                            class="btn btnSupprimer">Supprimer</button></span></i></i> </li>
-        </ul>
-    </div>
-</section>

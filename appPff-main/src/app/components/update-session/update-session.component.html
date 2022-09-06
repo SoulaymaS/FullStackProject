@@ -15,7 +15,7 @@
             <label for="formation">Formation</label><br>
             <select  ngModel name="formation"  class="form-select form-control"   >
                 <option [(ngModel)]="mySession.formation" selected></option>
-                <option *ngFor="let f of listFormation"  id="formation" value={{f.title}}> {{f.title}} </option>  
+                <option *ngFor="let f of listFormation"  id="formation" value={{f}}> {{f.title}} </option>  
              </select>
              <br>
              <div class="form-check form-switch form-switch-md">
@@ -25,7 +25,7 @@
               </div>
               <br>
          
-            <button class="btn btn-primary">Modifier</button>
+            <button class="btn btnModifer">Modifier</button>
         </form>
     </div>
 </div>

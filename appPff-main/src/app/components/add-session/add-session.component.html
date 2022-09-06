@@ -9,25 +9,15 @@
             <input ngModel type="text" class="form-control" id="duration" name="duration">
             
             <label for="formation">Formation</label><br>
-            <select  ngModel  class="form-select form-control" >
+            <select  ngModel name="formation"  class="form-select form-control" >
                 <option selected>Choisir une formation</option>
-                <option *ngFor="let f of listFormation"  id="formation" name="formation" value={{f.title}}> {{f.title}} </option>  
+                <option *ngFor="let f of listFormation"  id="formation"  value={{f}}> {{f.title}} </option>  
              </select>
              <br>
 
          
             <button class="btn btn-primary">Ajouter</button>
         </form>
-        <span><a (click)="show = !show" class="showLink" >Afficher la liste des Sessions</a></span>
+   
 </section>
 <br><br>
-<section *ngIf="show">
-    <div class="container">
-        <h3> Liste des sessions </h3>
-    
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item" *ngFor="let s of listofsessions"> <i >{{s.formation}}  {{s.date| date:'mediumDate'}}  {{s.sessionStatus}}<i class="btn-group"><span>
-                <button [routerLink]="['/adminPage/updateSession/' ,s.id]" class="btn btnModifer">Modifier</button></span><span><button (click)="SupprimerSession(s.id)" class="btn btnSupprimer">Supprimer</button></span></i></i> </li>  
-        </ul>
-    </div>
-    </section>

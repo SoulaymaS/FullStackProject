@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
+import { FormateurServiceService } from 'src/app/services/formateur-service.service';
 import { FormationService } from 'src/app/services/formation.service';
 import { ThemeSerrviceService } from 'src/app/services/theme-serrvice.service';
 
@@ -11,8 +12,9 @@ import { ThemeSerrviceService } from 'src/app/services/theme-serrvice.service';
 export class UpdateFormationComponent implements OnInit {
   myFormation
   listTheme
+  listFormateur
 
-  constructor(private FormServ:FormationService, private router:Router, private activatedRoute:ActivatedRoute, private ThemeServ: ThemeSerrviceService) { }
+  constructor(private FormServ:FormationService, private router:Router, private activatedRoute:ActivatedRoute, private ThemeServ: ThemeSerrviceService, private FormateurServ:FormateurServiceService) { }
 
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe({
@@ -39,8 +41,14 @@ export class UpdateFormationComponent implements OnInit {
        },
        
     })
-    
-    
+    this.FormateurServ.getFormateurs().subscribe({
+      next: (res) => {
+        console.log(res);
+        this.listFormateur = res;
+    }, error: (err) => {
+      console.log(err);
+    }
+    }) 
   }
   modifFormation(newF){
     return this.FormServ.updateFormation(newF).subscribe({
