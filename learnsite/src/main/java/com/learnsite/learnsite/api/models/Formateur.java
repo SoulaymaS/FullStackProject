@@ -12,12 +12,10 @@ private String id;
 private String nom;
 private String username;
 private String prenom;
-@DBRef User user;
+@DBRef 
+private User user;
 private String cin;
 private String profession;
-
-@DBRef
-private Session session;
 
 
 public String getId() {
@@ -26,12 +24,7 @@ public String getId() {
 public void setId(String id) {
 	this.id = id;
 }
-public Session getSession() {
-	return session;
-}
-public void setSession(Session session) {
-	this.session = session;
-}
+
 public String getNom() {
 	return nom;
 }

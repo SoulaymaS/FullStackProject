@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Formation } from '../models/formation';
+import { Formation } from 'src/app/models/Formation';
 
 
 @Injectable({

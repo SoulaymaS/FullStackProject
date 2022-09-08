@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Theme } from '../models/theme';
+import { Theme } from '../models/Theme';
+
+
 
 
 @Injectable({
