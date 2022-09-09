@@ -1,3 +1,6 @@
+.position{
+    padding:  70px 10px 0; /* Height of navbar */;
+}
 .alert-danger{
     background-color: rgba(0,0,0,0);
     color: red;

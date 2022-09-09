@@ -22,6 +22,8 @@ import { SessionListComponent } from './components/session-list/session-list.com
 import { DashListThemeComponent } from './components/dash-list-theme/dash-list-theme.component';
 import { DashListSessionComponent } from './components/dash-list-session/dash-list-session.component';
 import { DashListFormationComponent } from './components/dash-list-formation/dash-list-formation.component';
+import { FactureComponent } from './components/facture/facture.component';
+import { PayementComponent } from './components/payement/payement.component';
 
 
 
@@ -32,10 +34,12 @@ const routes: Routes = [
   {path:'themes' , component:SeprateListThemeComponent},
   {path:'formations', component:FormationListComponent},
   {path:'sessions/:id',component:SessionListComponent},
+  {path:'payement/:id',component:PayementComponent },
   {path:'signup', component:SignUpComponent},
   {path:'signin', component:SignInComponent},
-  {path:'profile',component: ProfileComponent },
+  {path:'profile/:id',component: ProfileComponent },
   {path:'mesSessions/:id',component:MesSessionsComponent },
+  {path:'note-honoraire/:id',component:FactureComponent },
   
   
   {path: 'adminPage', component: DashboardComponent, 

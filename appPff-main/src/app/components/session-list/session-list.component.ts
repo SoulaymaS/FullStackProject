@@ -10,28 +10,42 @@ import { SessionServiceService } from 'src/app/services/session-service.service'
 })
 export class SessionListComponent implements OnInit {
  
-  constructor(private FormServ: FormationService, private activatedRoute:ActivatedRoute ) { }
+  constructor(private FormServ: FormationService, private activatedRoute:ActivatedRoute, private SessServ:SessionServiceService ) { }
   listsessions
   listformations
   ngOnInit(): void {
-    this.activatedRoute.paramMap.subscribe({
-      next: (p: ParamMap) => {
-        this.FormServ.getFormationById(p.get('id')).subscribe({
-          next: (response) => {
-            this.listformations= response
-            console.log(this.listformations);
-            this.listsessions=this.listformations.sessions
-          },
-          error: (err) => {
-            console.log('Probleme avec getFormationById');
-          },
-        });
-      },
-      error: (err) => {
-        console.log('Probleme avec paramMap');
-      },
-    });
+    // this.activatedRoute.paramMap.subscribe({
+    //   next: (p: ParamMap) => {
+    //     this.FormServ.getFormationById(p.get('id')).subscribe({
+    //       next: (response) => {
+    //         this.listformations= response
+    //         console.log(this.listformations);
+    //         this.listsessions=this.listformations.sessions
+    //         console.log(this.listsessions);
+            
+    //       },
+    //       error: (err) => {
+    //         console.log('Probleme avec getFormationById');
+    //       },
+    //     });
+    //   },
+    //   error: (err) => {
+    //     console.log('Probleme avec paramMap');
+    //   },
+    // });
+///////////////////////////
 
+  this.SessServ.getSessions().subscribe({
+    next: (res)=> {
+      this.listformations= res
+      this.listsessions=this.listformations.filter(r=>r.formation.id==this.activatedRoute.snapshot.paramMap.get('id'));
+      console.log(this.listsessions);
+    }, error: (err) =>{
+      console.log(err);
+    }
+  });
+
+  }
     
 
 
@@ -40,4 +54,4 @@ export class SessionListComponent implements OnInit {
 
 
 
-}
+

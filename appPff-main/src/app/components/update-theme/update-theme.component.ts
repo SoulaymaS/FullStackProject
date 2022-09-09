@@ -40,6 +40,7 @@ export class UpdateThemeComponent implements OnInit {
     });
   }
   modifTheme(newT){
+    newT.id=this.myTheme.id
     return this.ThemServ.updateTheme(newT).subscribe({
       next:(res)=>{
         console.log(res);

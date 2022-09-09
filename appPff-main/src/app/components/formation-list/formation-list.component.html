@@ -2,7 +2,8 @@
     <div id="image">
         <!-- <img src="https://cdn.pixabay.com/photo/2017/09/14/08/28/head-2748333_960_720.jpg"> -->
         <!-- "https://images.pexels.com/photos/256417/pexels-photo-256417.jpeg?cs=srgb&dl=pexels-pixabay-256417.jpg&fm=jpg" -->
-        <img class="imagenav" src="https://img.freepik.com/photos-premium/jeune-etudiante-souriante-contre-universite-jolie-etudiante-tient-dossiers-cahiers-dans-mains_101969-2357.jpg?w=1060"
+        <img class="imagenav"
+            src="https://img.freepik.com/vecteurs-premium/jeune-groupe-etudiants-race-mixte-au-campus-yard-education-college-friends-relaxant-marchant-devant-exterieur-du-batiment-universite_48369-25309.jpg?w=1380"
             alt="not-found">
     </div>
 
@@ -11,20 +12,24 @@
     <br><br>
     <div class=" pageTitle">
         <h1>Nos Formations</h1>
-        <br><br><hr>
+        <br><br>
+        <hr>
     </div>
     <br>
     <h3>Transformez votre passion en métier </h3>
     <br><br>
-    <div  class="row">
-        <li *ngFor="let f of listformation">
-        <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">{{f.title}}</h5>
-              <p class="card-text">{{f.description}}.</p>
-              <a [routerLink]="['/sessions/', f.id]" class="btn btn-warning">Session à venir</a>
-            </div>
-          </div>
+    <div class="container">
+        <div class="row">
+            <li *ngFor="let f of listformation">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title title">{{f.title}}</h5>
+                        <p class="card-text">{{f.description}}</p>
+                        <a [routerLink]="['/sessions/', f.id]" class="btn btn-warning">Session à venir</a>
+                    </div>
+                </div>
+            </li>
+        </div>
     </div>
-
+    <br><br><br>
 </section>

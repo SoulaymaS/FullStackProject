@@ -19,3 +19,19 @@
     color:rgb(109, 203, 199);
     background-color: white;
 }
+.btnSwitch{
+  margin-right: 2%;
+  /* box-shadow: none; */
+  
+}
+.btnSwitch:checked{
+  background-color: #0BDA51;
+  border-color:#0BDA51 ; 
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgb(11, 218, 81, 0.8);
+}
+
+.btnSwitch:focus:not(:checked){
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px red;  /*styling switch button on focus  */
+  border-color: red; 
+ 
+}

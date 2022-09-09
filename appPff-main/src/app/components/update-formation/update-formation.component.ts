@@ -22,6 +22,8 @@ export class UpdateFormationComponent implements OnInit {
         this.FormServ.getFormationById(p.get('id')).subscribe({
           next: (response) => {
             this.myFormation = response;
+            console.log(this.myFormation);
+            
           },
           error: (err) => {
             console.log('Probleme avec getFormationById');
@@ -36,6 +38,7 @@ export class UpdateFormationComponent implements OnInit {
     this.ThemeServ.getThemes().subscribe({
       next:(res)=>{
         this.listTheme=res
+       console.log(this.listTheme);
        
         
        },
@@ -51,6 +54,8 @@ export class UpdateFormationComponent implements OnInit {
     }) 
   }
   modifFormation(newF){
+   
+    newF.id=this.myFormation.id
     return this.FormServ.updateFormation(newF).subscribe({
       next:(res)=>{
         console.log(res);

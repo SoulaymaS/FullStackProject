@@ -16,7 +16,9 @@ export class CarouselComponent implements OnInit {
     this.SessServ.getSessions().subscribe({
       next: (res) => {
         console.log(res);
-        this.sessionList=res
+        this.sessionList=res.filter(res => res.sessionStatus==false)
+        console.log(this.sessionList);
+        
       },
       error: (err) => {
         console.log('probleme avec get session caroussel')
