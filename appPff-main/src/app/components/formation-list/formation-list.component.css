@@ -27,3 +27,16 @@ h3{
         font-size: 8vw;
     }
 }
+.btn{
+    float: right;
+}
+.card{
+    margin: 2%;
+    /* border-color:rgb(109, 203, 199) ; */
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+}
+.title{
+    font-weight: bold;
+  font-size: 30px;
+
+}

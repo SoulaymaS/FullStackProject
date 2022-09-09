@@ -3,9 +3,12 @@ export class Session {
     constructor(
       public id: string,
       public date: Date,
-      public duration:number,
+      public duration:string,
       public enroledUsers:[],
-      public formation:string   
+      public formation:string,
+      public prix:number,
+      public heureprix:number,
+      public sessionStatus:boolean
     ) {
 
   }
