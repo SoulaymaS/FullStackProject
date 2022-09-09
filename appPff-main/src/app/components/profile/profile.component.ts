@@ -16,6 +16,7 @@ export class ProfileComponent implements OnInit {
   passwordPtn ='^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,16}$'
   ngOnInit(): void {
     this.currentUser = this.tokenStorage.getUser();
+    console.log(this.currentUser);
 
     
   }
