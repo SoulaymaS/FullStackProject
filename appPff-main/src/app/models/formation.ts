@@ -8,7 +8,6 @@ export class Formation {
       public id: string,
       public title: string,
       public description: string,
-      public duration:string,
       public formateur: Formateur,
       public sessions:[Session],
       public theme:Theme

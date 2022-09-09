@@ -1,0 +1,64 @@
+<section class="position">
+  <div class="container-fluid">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        
+              <div class="content col-lg-8 col-xl-7">
+                  <div class="card ">
+                      <div class="facture">
+                          <div class="entete">
+                              <span id="nomPrenom">Bsila Hend</span>
+                              <p id="adresseMail">Adresse Mail</p>
+                              <p>Num CIN 1234 1234 </p>
+                          </div>
+                          <hr>
+                          <div class="corps">
+
+
+
+                              <table>
+                                  <tr>
+                                      <td><span>Nom de la formation</span></td>
+                                      <td><span>{{mySession.formation.title}}</span> </td>
+
+                                  </tr>
+                                  <tr>
+                                      <td><span>Session</span></td>
+                                      <td><span>{{mySession.date|date:'longDate'}}</span></td>
+                                  </tr>
+                                  <tr>
+                                      <td><span>Durée</span></td>
+                                      <td><span>{{mySession.duration}}</span></td>
+                                  </tr>
+                                  <tr>
+                                      <td><span>Prix de l'heure</span> </td>
+                                      <td><span>{{mySession.prix}} Dinars TTC</span></td>
+                                  </tr>
+                                  <tr>
+                                    <td><span>Total</span> </td>
+                                    <td><span>{{Total}} Dinars TTC</span></td>
+                                </tr>
+                              </table>
+                              <br><br><br>
+                              <a class="btn btn-success">Valider</a>
+
+                          </div>
+                          <hr>
+                          <div class="piedPage">
+                              <p ><span id="email">e-learning-platform@platform.com </span>     <strong id="tel">Tel:  +216 123 123</strong> </p>
+
+
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="image ">
+                
+                <!-- https://img.freepik.com/vecteurs-libre/etudiants-qui-etudient-ligne_74855-5584.jpg?w=1060&t=st=1662738048~exp=1662738648~hmac=9ded417843069aace86440414b9b851046eeec55ed6a524dc67605bd230f219d -->
+                <img
+                      src="https://img.freepik.com/vecteurs-libre/homme-faisant-presentation-graphique-via-ordinateur-portable_1150-35050.jpg?w=1060&t=st=1662738588~exp=1662739188~hmac=fbc53d90197eccfac809092c1efb6ac14cdb04c1e3224e8a37a487731257d6b9" >
+                  </div>
+          </div>
+      
+  </div>
+  <br><br><br>
+</section>

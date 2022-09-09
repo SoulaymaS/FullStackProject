@@ -30,7 +30,11 @@ import { SeprateListThemeComponent } from './components/seprate-list-theme/sepra
 import { MesSessionsComponent } from './components/mes-sessions/mes-sessions.component';
 import { DashListThemeComponent } from './components/dash-list-theme/dash-list-theme.component';
 import { DashListFormationComponent } from './components/dash-list-formation/dash-list-formation.component';
-import { DashListSessionComponent } from './components/dash-list-session/dash-list-session.component'; 
+import { DashListSessionComponent } from './components/dash-list-session/dash-list-session.component';
+import { FactureComponent } from './components/facture/facture.component';
+import { ShortPipe } from './short.pipe';
+import { StatutPipe } from './statut.pipe';
+import { PayementComponent } from './components/payement/payement.component'; 
 
 @NgModule({
   declarations: [
@@ -61,6 +65,10 @@ import { DashListSessionComponent } from './components/dash-list-session/dash-li
     DashListThemeComponent,
     DashListFormationComponent,
     DashListSessionComponent,
+    FactureComponent,
+    ShortPipe,
+    StatutPipe,
+    PayementComponent,
 
   ],
   imports: [

@@ -54,9 +54,10 @@
           <img src="https://www.freeiconspng.com/thumbs/profile-icon-png/account-profile-user-icon--icon-search-engine-10.png" alt="photo de profile" width="40" height="40" class="rounded-circle">
         </a>
         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" routerLink="profile" ><i class="icon fa-solid fa-user"></i>Mon compte</a>
-          <a class="dropdown-item" routerLink="" ><i class="icon fa-solid fa-gear"></i>Paramètres</a>
+          <a class="dropdown-item" [routerLink]="['profile/' ,currentUser.id]"  ><i class="icon fa-solid fa-user"></i>Mon compte</a>
+          <a class="dropdown-item" [routerLink]="['profile/' ,currentUser.id]" ><i class="icon fa-solid fa-gear"></i>Paramètres</a>
           <a class="dropdown-item" [routerLink]="['mesSessions/' ,currentUser.id]"><i class="icon fa-solid fa-book"></i>Mes Sessions</a>
+          <a class="dropdown-item" [routerLink]="['note-honoraire/', currentUser.id]"><i class="icon fa-solid fa-money-check-dollar"></i>Générer une note d'honoraire</a>
           <a class="dropdown-item" routerLink="adminPage"  ><i class="icon fa-solid fa-desktop "></i>Back office</a>
           <a class="dropdown-item" routerLink="acceuil" onClick="toLogout()"><i class="icon fa-solid fa-arrow-right-from-bracket"></i>Log Out</a>
         </div>

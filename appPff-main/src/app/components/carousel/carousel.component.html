@@ -4,32 +4,35 @@
       <div class="cards-wrapper">
         <div class="card ">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+            <h5 class="card-title title">{{sessionList[0].formation.title}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{sessionList[0].duration}}</h6>
+            <p class="card-text">{{sessionList[0].prix}} Dinars TTC</p>
+           <div class="btn-group">
+              <a [routerLink]="['/sessions/', sessionList[0].formation.id, 'payement']" type="button" class="btn btn-success btnSinscrire">S'inscrire</a>
+              <a [routerLink]="['/sessions/', sessionList[0].formation.id]" type="button" class="btn btn-warning btnDecouvrir">Découvrir</a>
+            </div>
           </div>
         </div>
         <div class="card d-none d-md-block">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+            <h5 class="card-title title">{{sessionList[1].formation.title}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{sessionList[1].duration}}</h6>
+            <p class="card-text">{{sessionList[1].prix}} Dinars TTC</p>
+            <div class="btn-group">
+              <a [routerLink]="['/payement', sessionList[1].id ]" class="btn btn-success">S'inscrire</a>
+              <a [routerLink]="['/sessions/', sessionList[1].formation.id]" class="btn btn-warning">Découvrir</a>
+            </div>
           </div>
         </div>
         <div class="card d-none d-md-block">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+            <h5 class="card-title title">{{sessionList[2].formation.title}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{sessionList[2].duration}}</h6>
+            <p class="card-text">{{sessionList[2].prix}} Dinars TTC</p>
+            <div class="btn-group">
+              <a [routerLink]="['/sessions/', sessionList[2].formation.id, 'payement']" class="btn btn-success">S'inscrire</a>
+              <a [routerLink]="['/sessions/', sessionList[2].formation.id]" class="btn btn-warning">Découvrir</a>
+            </div>
           </div>
         </div>
 
@@ -39,32 +42,35 @@
       <div class="cards-wrapper">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+            <h5 class="card-title title">{{sessionList[3].formation.title}}  </h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{sessionList[3].duration}} </h6>
+            <p class="card-text">{{sessionList[3].prix}} Dinars TTC</p>
+            <div class="btn-group">
+              <a [routerLink]="['/sessions/', sessionList[3].formation.id, 'payement']" class="btn btn-success">S'inscrire</a>
+              <a [routerLink]="['/sessions/', sessionList[3].formation.id]" class="btn btn-warning">Découvrir</a>
+            </div>
           </div>
         </div>
         <div class="card d-none d-md-block">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+            <h5 class="card-title title">{{sessionList[4].formation.title}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{sessionList[4].duration}}</h6>
+            <p class="card-text">{{sessionList[4].prix}} Dinars TTC</p>
+            <div class="btn-group">
+              <a [routerLink]="['/sessions/', sessionList[4].formation.id, 'payement']" class="btn btn-success">S'inscrire</a>
+              <a [routerLink]="['/sessions/', sessionList[4].formation.id]" class="btn btn-warning">Découvrir</a>
+            </div>
           </div>
         </div>
         <div class="card d-none d-md-block">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+            <h5 class="card-title title">{{sessionList[5].formation.title}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{sessionList[5].duration}}</h6>
+            <p class="card-text">{{sessionList[5].prix}} Dinars TTC</p>
+            <div class="btn-group">
+              <a [routerLink]="['/sessions/', sessionList[5].formation.id, 'payement']" class="btn btn-success">S'inscrire</a>
+              <a [routerLink]="['/sessions/', sessionList[5].formation.id]" class="btn btn-warning">Découvrir</a>
+            </div>
           </div>
         </div>
       </div>
@@ -73,32 +79,35 @@
       <div class="cards-wrapper">
         <div class="card ">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+            <h5 class="card-title title">{{sessionList[6].formation.title}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{sessionList[6].duration}}</h6>
+            <p class="card-text">{{sessionList[6].prix}} Dinars TTC</p>
+            <div class="btn-group">
+              <a [routerLink]="['/sessions/', sessionList[6].formation.id, 'payement']" class="btn btn-success">S'inscrire</a>
+              <a [routerLink]="['/sessions/', sessionList[6].formation.id]" class="btn btn-warning">Découvrir</a>
+            </div>
           </div>
         </div>
         <div class="card d-none d-md-block">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+            <h5 class="card-title title">{{sessionList[7].formation.title}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{sessionList[7].duration}}</h6>
+            <p class="card-text">{{sessionList[7].prix}} Dinars TTC</p>
+            <div class="btn-group">
+              <button [routerLink]="['/sessions/', sessionList[7].formation.id, 'payement']" class="btn btn-success">S'inscrire</button>
+              <button [routerLink]="['/sessions/', sessionList[7].formation.id]" class="btn btn-warning">Découvrir</button>
+            </div>
           </div>
         </div>
         <div class="card d-none d-md-block">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+            <h5 class="card-title title">{{sessionList[8].formation.title}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{sessionList[8].duration}}Card subtitle</h6>
+            <p class="card-text">{{sessionList[8].prix}} Dinars TTC</p>
+            <div class="btn-group">
+            <a [routerLink]="['/sessions/', sessionList[8].formation.id, 'payement']" class="btn btn-success">S'inscrire</a>
+            <a [routerLink]="['/sessions/', sessionList[8].formation.id]" class="btn btn-warning">Découvrir</a>
+          </div>
           </div>
         </div>
 

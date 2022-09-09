@@ -21,3 +21,18 @@
       }
     
 }
+.btn-group{
+  float: right;
+
+}
+
+.btn{
+ 
+  margin: 3%;
+}
+
+
+.title{
+  font-weight: bold;
+  font-size: 30px;
+}
