@@ -22,19 +22,19 @@
                       <hr>
                     </header>
                     <br>
-                    <h5 id="name"></h5>
+                    <h5 id="name">{{ currentUser.username |titlecase }}</h5>
                     <br>
                     <div style="overflow-x:auto;">
                       <table>
                         <tr>
                           <td><span>User name</span></td>
-                          <td><span id="username" style="text-align: center;"></span>
+                          <td><span id="username" style="text-align: center;">{{ currentUser.username }}</span>
                           </td>
 
                         </tr>
                         <tr>
                           <td><span>Adresse mail</span></td>
-                          <td><span id="email"></span></td>
+                          <td><span id="email">{{ currentUser.email }}</span></td>
                         </tr>
                         <tr>
                           <td><strong>Roles</strong></td>
