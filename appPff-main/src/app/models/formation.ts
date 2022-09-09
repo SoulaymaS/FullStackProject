@@ -1,6 +1,6 @@
 import { Formateur } from "./Formateur";
 import { Session } from "./Session";
-import { Theme } from "./theme";
+import { Theme } from "./Theme";
 
 export class Formation {
   

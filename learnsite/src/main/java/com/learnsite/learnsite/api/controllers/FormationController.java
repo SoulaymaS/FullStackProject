@@ -78,8 +78,7 @@ public ResponseEntity<Formation> updateFormation(@PathVariable("id") String id, 
 		Formation _formation = formationData.get();
 		_formation.setTitle(formation.getTitle());
 		_formation.setDescription(formation.getDescription());
-	    _formation.setFormateur(formation.getFormateur());
-		_formation.setSession(formation.getSession());
+		
 		repo.save(_formation);
 		return  new ResponseEntity<Formation>(_formation,HttpStatus.OK);
 	} else {

@@ -1,4 +1,3 @@
-import { Formation } from "./formation";
 import { Session } from "./Session";
 
 export class Formateur {

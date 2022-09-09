@@ -77,7 +77,6 @@ public ResponseEntity<Formateur> updateFormateur(@PathVariable("id") String id, 
 		_formateur.setPrenom(formateur.getPrenom());
 		_formateur.setCin(formateur.getCin());
 		_formateur.setProfession(formateur.getProfession());
-		_formateur.setSession(formateur.getSession());
 		repo.save(_formateur);
 		return  new ResponseEntity<Formateur>(_formateur,HttpStatus.OK);
 	} else {

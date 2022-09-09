@@ -59,7 +59,7 @@
           <a class="dropdown-item" [routerLink]="['mesSessions/' ,currentUser.id]"><i class="icon fa-solid fa-book"></i>Mes Sessions</a>
           <a class="dropdown-item" [routerLink]="['note-honoraire/', currentUser.id]"><i class="icon fa-solid fa-money-check-dollar"></i>Générer une note d'honoraire</a>
           <a class="dropdown-item" routerLink="adminPage"  ><i class="icon fa-solid fa-desktop "></i>Back office</a>
-          <a class="dropdown-item" routerLink="acceuil" onClick="toLogout()"><i class="icon fa-solid fa-arrow-right-from-bracket"></i>Log Out</a>
+          <a class="dropdown-item" routerLink="acceuil" *ngIf="logSer.isLoggedIn()" (click)="toLogout()"><i class="icon fa-solid fa-arrow-right-from-bracket"></i>Logout</a>
         </div>
       </li>   
     </ul>

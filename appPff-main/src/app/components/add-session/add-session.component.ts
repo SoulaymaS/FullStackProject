@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {  Router } from '@angular/router';
-import { Formation } from 'src/app/models/formation';
+import { Formation } from 'src/app/models/Formation';
 import { Session } from 'src/app/models/Session';
 import { FormationService } from 'src/app/services/formation.service';
 import { SessionServiceService } from 'src/app/services/session-service.service';

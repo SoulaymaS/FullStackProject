@@ -17,8 +17,7 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
     this.currentUser = this.tokenStorage.getUser();
     console.log(this.currentUser);
-
-    
+   
   }
   UpdateUser(newU){
     newU.id=this.currentUser.id

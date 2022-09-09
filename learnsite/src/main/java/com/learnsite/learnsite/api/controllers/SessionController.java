@@ -74,10 +74,9 @@ public class SessionController {
 			Session _session = sessionData.get();
 			_session.setDate(session.getDate());
 			_session.setDuration(session.getDuration());
-			_session.setStatus(session.getStatus());
 			_session.setFormation(session.getFormation());
 			_session.setSessionStatus(session.isSessionStatus());
-			_session.setUser(session.getUser());
+			_session.setUsers(session.getUsers());
 			repo.save(_session);
 			return  new ResponseEntity<Session>(_session,HttpStatus.OK);
 		} else {

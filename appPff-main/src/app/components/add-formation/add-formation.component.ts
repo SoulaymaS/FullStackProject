@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Formation } from 'src/app/models/formation';
-import { Theme } from 'src/app/models/theme';
 import { User } from 'src/app/models/User';
 import { ThemeSerrviceService } from 'src/app/services/theme-serrvice.service';
 import { FormationService } from './../../services/formation.service';
 import { FormateurServiceService } from 'src/app/services/formateur-service.service';
+import { Formateur } from 'src/app/models/Formateur';
+import { Theme } from 'src/app/models/Theme';
+import { Formation } from 'src/app/models/Formation';
 
 @Component({
   selector: 'app-add-formation',
@@ -15,10 +16,10 @@ import { FormateurServiceService } from 'src/app/services/formateur-service.serv
 export class AddFormationComponent implements OnInit {
 
   constructor(private formServ: FormationService, private router: Router, private ThemeServ: ThemeSerrviceService, private FormateurServ: FormateurServiceService) { }
-  listTheme
-  listFormateur
-  listofFormation
-
+  listTheme : Theme[];
+  listFormateur 
+  listofFormation : Formation[];
+  //selectedObject : Theme
   ngOnInit(): void {
     this.ThemeServ.getThemes().subscribe({
       next: (res) => {
@@ -58,6 +59,15 @@ export class AddFormationComponent implements OnInit {
       }
     });
   }
+  
+  docvalue
+  modify(id){
+    console.log(id);
+    this.docvalue = this.listTheme.find(x => x.id == id);
+    console.log(this.docvalue);
+  }
 
+  
 
+ 
 }

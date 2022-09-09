@@ -1,6 +1,7 @@
 package com.learnsite.learnsite.api.models;
 import java.util.Date;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
@@ -8,21 +9,20 @@ import org.springframework.data.mongodb.core.mapping.DBRef;
 public class Session {
 @Id
 private String id;
+
+private String titre;
 private Date date;
 private String duration;
-private Boolean status;
+
 private Float prix;
-public Float getPrix() {
-	return prix;
-}
-public void setPrix(Float prix) {
-	this.prix = prix;
-}
+private Float heureprix;
 //list of enrolled users
-private List<User> user;
+@DBRef
+private Set<User> users= new HashSet<>();
 @DBRef
 private Formation formation;
-
+@DBRef
+private Formateur formateur;
 public String getId() {
 	return id;
 }
@@ -30,19 +30,9 @@ public void setId(String id) {
 	this.id = id;
 }
 
-public Boolean getStatus() {
-	return status;
-}
-public void setStatus(Boolean status) {
-	this.status = status;
-}
+
 //Getters and Setters
-public List<User> getUser() {
-	return user;
-}
-public void setUser(List<User> user) {
-	this.user = user;
-}
+
 public boolean isSessionStatus() {
 	return sessionStatus;
 }
@@ -69,5 +59,35 @@ public Formation getFormation() {
 }
 public void setFormation(Formation formation) {
 	this.formation = formation;
+}
+public Float getPrix() {
+	return prix;
+}
+public void setPrix(Float prix) {
+	this.prix = prix;
+}
+public Float getHeureprix() {
+	return heureprix;
+}
+public void setHeureprix(Float heureprix) {
+	this.heureprix = heureprix;
+}
+public Formateur getFormateur() {
+	return formateur;
+}
+public Set<User> getUsers() {
+	return users;
+}
+public void setUsers(Set<User> users) {
+	this.users = users;
+}
+public void setFormateur(Formateur formateur) {
+	this.formateur = formateur;
+}
+public String getTitre() {
+	return titre;
+}
+public void setTitre(String titre) {
+	this.titre = titre;
 }
 }
