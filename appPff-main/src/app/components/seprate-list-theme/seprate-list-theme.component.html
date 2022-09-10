@@ -24,7 +24,7 @@
         <div class="row">
                 <li *ngFor="let t of listoftheme">
                 <div class="card ">
-                    <img class="card-img-top" src="{{t.image}}" alt="img">
+                    <a [routerLink]="['/formations/' ,t.id]"><img class="card-img-top" src="{{t.image}}" alt="img"></a>
                     <div class="card-body">
                       <h5 class="card-title">{{t.title}}</h5>
                       <p class="card-text">{{t.description}}</p>

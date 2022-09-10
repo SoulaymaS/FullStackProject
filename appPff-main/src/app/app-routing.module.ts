@@ -32,7 +32,7 @@ const routes: Routes = [
   {path:'', redirectTo: 'acceuil', pathMatch: 'full'},
   {path:'acceuil' , component:AcceuilComponent},
   {path:'themes' , component:SeprateListThemeComponent},
-  {path:'formations', component:FormationListComponent},
+  {path:'formations/:id', component:FormationListComponent},
   {path:'sessions/:id',component:SessionListComponent},
   {path:'payement/:id',component:PayementComponent },
   {path:'signup', component:SignUpComponent},

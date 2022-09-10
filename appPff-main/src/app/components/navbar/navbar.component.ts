@@ -10,6 +10,7 @@ import { TokenStorageService } from './../../services/token-storage.service';
 })
 export class NavbarComponent implements OnInit {
 currentUser
+
   constructor(private token:TokenStorageService, public logSer: LoginServiceService) { }
 
   ngOnInit(): void {
