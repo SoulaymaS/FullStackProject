@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { SessionServiceService } from 'src/app/services/session-service.service';
+import { TokenStorageService } from 'src/app/services/token-storage.service';
 
 @Component({
   selector: 'app-mes-sessions',
@@ -8,33 +9,41 @@ import { SessionServiceService } from 'src/app/services/session-service.service'
   styleUrls: ['./mes-sessions.component.css']
 })
 export class MesSessionsComponent implements OnInit {
-  listSessions
-  mySessions
-  constructor(private route: ActivatedRoute, private SessServ: SessionServiceService) { }
+  myListOfSessions
+  currentUser
+  SessionList
+  
+  constructor(private tokenStorage:TokenStorageService ,private route: ActivatedRoute, private SessServ: SessionServiceService) { }
 
   ngOnInit(): void {
+    this.tokenStorage.getUser().subscribe({
+      next: (response) => {
+        this.currentUser= response
+     
+      },
+      error: (err) => {
+        console.log('Probleme avec get current User' );
+      },
+
+    })
 
     this.SessServ.getSessions().subscribe({
-      next: (res) => {
-        this.listSessions = res;
-        console.log(res);
-
-
-      }, error: (err) => {
-        console.log(err);
-      }
+      next: (response) => {
+        this.SessionList= response
+        this.SessionList.forEach(e=>e.users.forEach(u=>{if (u.id==this.currentUser.id) 
+        this.myListOfSessions.push(e)} 
+          
+          ))
+     
+      },
+      error: (err) => {
+        console.log('Probleme avec getsession my session list' );
+      },
     });
+    };
 
-    this.listSessions.forEach(s => {
-      s.user.forEach(e => {
-        if (e.id == this.route.snapshot.paramMap.get('id')) {
-          this.mySessions+=s
-        }
-      });
 
-    });
-    console.log(this.mySessions);
 
-  }
+ }
 
-}
+

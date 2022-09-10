@@ -1,8 +1,24 @@
-<section class="myAccount position">
+<section class=" position">
     <hr>
     <br>
     <h3 class="title">Mes sessions</h3>
     <br>
     <hr>
-   
+    <div class="container">
+      <div class="row">
+          <li *ngFor="let s of myListOfSessions">
+              <div class="card">
+                  <div class="card-body">
+                      <h5 class="card-title title ">{{s.formation.title}}</h5>
+                      <h6 class="card-subtitle">{{s.date|date:'mediumDate'}} </h6>
+                      <h6 class="card-subtitle duration">{{s.duration}} </h6>
+                      <p class="card-subtitle prix">{{s.prix}} Dinar TTC</p><br><br><br>
+                      <p class="card-text">{{s.formation.description}}</p>
+                      <a [routerLink]="['/payement', s.id ]"class="btn btn-success">S'inscrire</a>
+                  </div>
+
+              </div>
+          </li>
+      </div>
+  </div>
   </section>
