@@ -38,7 +38,7 @@ export class SessionListComponent implements OnInit {
   this.SessServ.getSessions().subscribe({
     next: (res)=> {
       this.listformations= res
-      this.listsessions=this.listformations.filter(r=>r.formation.id==this.activatedRoute.snapshot.paramMap.get('id'));
+      this.listsessions=this.listformations.filter(r=>r.formation.id==this.activatedRoute.snapshot.paramMap.get('id') || r.sessionStatus==false);
       console.log(this.listsessions);
     }, error: (err) =>{
       console.log(err);
