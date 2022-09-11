@@ -12,7 +12,7 @@ private String id;
 private String nom;
 private String username;
 private String prenom;
-@DBRef 
+@DBRef
 private User user;
 private String cin;
 private String profession;

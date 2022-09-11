@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { TokenStorageService } from './token-storage.service';
 const AUTH_API = 'http://localhost:8050/auth/' ;
 
 const httpOptions = {
@@ -13,7 +14,7 @@ const httpOptions = {
 })
 export class LoginServiceService {
 
-  constructor( private http:HttpClient) { }
+  constructor( private http:HttpClient, private token: TokenStorageService ) { }
   
 
   toLogin(user): Observable<any>{
@@ -34,7 +35,37 @@ export class LoginServiceService {
   localStorage.removeItem('auth-user');
   
  }
+roleAs
+ getRole() {
+  this.roleAs = window.sessionStorage.getItem('roles');
+  return this.roleAs;
+}
+currentUser
+public isAdmin(): boolean{
+  if (!this.isLoggedIn()){
+    return false;
+  }
+  this.currentUser=this.token.getUser();
+  const roles= this.currentUser.roles;
+  if (roles.indexOf('ROLE_ADMIN')< 0){
+    return false;
+  }
+  return true;
 
+}
+
+public isFormateur(): boolean{
+  if (!this.isLoggedIn()){
+    return false;
+  }
+  this.currentUser=this.token.getUser();
+  const roles= this.currentUser.roles;
+  if (roles.indexOf('ROLE_FORM')< 0){
+    return false;
+  }
+  return true;
+
+}
 
   
 }

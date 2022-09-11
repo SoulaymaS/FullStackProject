@@ -41,7 +41,7 @@ show=false
     this.SessServ.addSession(newS).subscribe({
       next:(res)=>{
         console.log(res);
-        this.router.navigateByUrl('/formations'); ///changer l'url à l'url de la iste des sessions une fois prete!!!!!!!
+        this.router.navigateByUrl('/adminPage/updateSession'); 
       },
       error: (err) => {
         console.log('probleme avec ajout session')
@@ -58,7 +58,7 @@ show=false
       this.SessServ.deleteSession(id).subscribe({
         next:(res)=>{
           console.log(res);
-          this.router.navigateByUrl('/sessions');
+          this.router.navigateByUrl('/sessions/all');
         },
         error: (err) => {
           console.log('probleme avec supprimer session')
@@ -70,4 +70,9 @@ show=false
     }
   }
 
+  forvalue
+  modify(id){
+    this.forvalue= this.listFormation.find(x=> x.id == id);
+    console.log(this.forvalue);
+  }
 }

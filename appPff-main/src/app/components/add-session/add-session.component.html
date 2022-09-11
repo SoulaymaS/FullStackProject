@@ -2,6 +2,8 @@
 <section class="position">
         <h3> Ajouter une nouvelle session </h3>
         <form #f="ngForm" (ngSubmit)="addSession (f.value)">
+            <label for="titre">Titre</label>
+            <input ngModel required type="text" class="form-control" id="titre" name="titre">
             <label for="date">Date</label>
             <input ngModel required type="date" class="form-control" id="date" name="date">
 
@@ -15,10 +17,9 @@
             <input   ngModel type="number" class="form-control" id="heureprix" name="heureprix">
             
             <label for="formation">Formation</label><br>
-            <select  ngModel name="formation"  class="form-select form-control" >
-            
+            <select  [(ngModel)]="forvalue" (ngModelChange)="modify($event)" name="formation"  class="form-select form-control" >
                 <option selected>Choisir une formation</option>
-                <option *ngFor="let f of listFormation"  id="formation"  value={{f}}> {{f.title}} </option>  
+                <option *ngFor="let f of listFormation"  id="formation"  [value]="f.id"> {{f.title}} </option>  
              </select>
              <br>
 

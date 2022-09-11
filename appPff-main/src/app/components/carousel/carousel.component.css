@@ -27,7 +27,6 @@
 }
 
 .btn{
- 
   margin: 3%;
 }
 
@@ -35,4 +34,15 @@
 .title{
   font-weight: bold;
   font-size: 30px;
+}
+p{
+  font-family: monospace;
+  color:#ffbd59;
+}
+h5{
+  font-family: monospace;
+  text-indent: inherit;
+}
+p:hover{
+  font-size: 20px;
 }

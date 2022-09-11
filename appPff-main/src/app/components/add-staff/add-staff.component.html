@@ -100,8 +100,7 @@
         <label class="form-label" for="role">Ajouter un role</label><br>
 
         <select *ngFor="let r of listofRoles"   ngModel #role="ngModel" name="role" required class="form-select form-control" id="role">
-
-            <option   value="{{r}}">{{r.name}}</option>
+            <option value="{{r}}">{{r.name}}</option>
            
         </select>
         <!-- <div *ngIf="(role.touched || u.submitted)&&role.invalid" class="alert-danger">

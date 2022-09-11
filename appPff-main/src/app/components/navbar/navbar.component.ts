@@ -30,5 +30,7 @@ onWindowScroll() {
   }
   toLogout(){
     this.logSer.tologout();
+    window.location.reload();
     }
+
 }

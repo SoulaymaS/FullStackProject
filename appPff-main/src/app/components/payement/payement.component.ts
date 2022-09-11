@@ -44,7 +44,6 @@ currentUser
 
   AddUserToSession(currentUser){
     this.mySession.users.push(currentUser)
-
     this.SessServ.updateSession(this.mySession).subscribe({
       next: (response) => {
         alert("l'inscription a été effectué avec succès")

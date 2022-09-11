@@ -7,9 +7,9 @@ import { Injectable } from '@angular/core';
 export class RoleServiceService {
 
   constructor(private http:HttpClient) { }
-  link='http://localhost:8050/roles';
+  link='http://localhost:8050/auth/roles';
   
   getRoles(){
-    return this.http.get(`${this.link}/`)
+    return this.http.get(`${this.link}`)
   }
 }

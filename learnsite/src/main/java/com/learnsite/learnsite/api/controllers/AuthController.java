@@ -146,4 +146,18 @@ public class AuthController {
 	  	}
 	  	
 	  }
+	  @GetMapping("/roles")
+	  public ResponseEntity<List<Role>> getRoles(){
+	  	try {
+	  		List<Role> roles = roleRepository.findAll();
+	  		if (roles.isEmpty()) {
+	  			return new ResponseEntity<List<Role>>(HttpStatus.NO_CONTENT);
+	  		}
+	  		return new ResponseEntity<List<Role>>(roles,HttpStatus.OK);
+	  		
+	  	} catch (Exception e) {
+	  		return new ResponseEntity<List<Role>>(HttpStatus.INTERNAL_SERVER_ERROR);
+	  	}
+	  	
+	  }
 }

@@ -11,6 +11,7 @@
     color: black;
     font-weight: 1000;
     font-size: 20px;
+    font-family:monospace;
     
 }
 .dropdown:hover .dropdown-menu {
@@ -19,7 +20,7 @@
     background-color: rgba(255,255,255,0.6);
  }
  .navbar a:hover{
-    color:rgb(109, 203, 199)
+    color:#ffbd59;
     
 }
 #sec{
@@ -35,8 +36,8 @@
 
 }
 .dropdown-menu-end {
-    right: auto;
-    left: 0;
+    right: 0;
+    left: auto;
   }
 .icon{
     display: inline-block;
@@ -50,6 +51,10 @@ nav ul li a{
     white-space:nowrap;
 }
 
+.profileMenu{
+    margin-top: 10px;
+    margin-right: 0.5%;
+}
 
 
 .profileMenu a{
@@ -59,12 +64,16 @@ nav ul li a{
     
 }
 .profileMenu a:hover{
-    color:rgb(109, 203, 199)
+    color: #ffbd59;
     
 }
 /* .navbar-toggler{
     position:sticky;
 } */
-
-
+.positionNavbar{
+    margin-top: 20%;
+}
+.navbar{
+    margin-top: 1.5em;
+}
 

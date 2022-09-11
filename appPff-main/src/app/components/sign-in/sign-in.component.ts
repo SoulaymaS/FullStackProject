@@ -32,13 +32,14 @@ export class SignInComponent implements OnInit {
     this.logInServ.toLogin(user).subscribe({
       next: data => {
         console.log(data);
-        this.tokenStorage.saveToken(data.accessToken); //we can't access the cookie because of httponly option in springboot
+        this.tokenStorage.saveToken(data.accessToken); //if we can't access the cookie, that's because of httponly option in springboot
         this.tokenStorage.saveUser(data);
 
         this.isLoginFailed = false;
         this.isLoggedIn = true;
         this.roles = this.tokenStorage.getUser().roles;
         this.router.navigateByUrl('/acceuil');
+        window.location.reload();
       },
       error: err => {
         this.errorMessage = err.error.message;
@@ -49,6 +50,7 @@ export class SignInComponent implements OnInit {
 
   reloadPage(): void {
     window.location.reload();
+    
   }
    
     

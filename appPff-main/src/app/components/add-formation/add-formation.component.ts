@@ -52,7 +52,7 @@ export class AddFormationComponent implements OnInit {
     this.formServ.addFormation(newF).subscribe({
       next: (res) => {
         console.log(res);
-        this.router.navigateByUrl('/formations');
+        this.router.navigateByUrl('/formations/all');
       },
       error: (err) => {
         console.log('probleme avec ajout formation')
