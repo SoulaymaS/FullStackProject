@@ -17,10 +17,16 @@
             <input   ngModel type="number" class="form-control" id="heureprix" name="heureprix">
             
             <label for="formation">Formation</label><br>
-            <select  [(ngModel)]="forvalue" (ngModelChange)="modify($event)" name="formation"  class="form-select form-control" >
+            <select  [(ngModel)]="forvalue" (ngModelChange)="modify($event)" id="formation" name="formation"  class="form-select form-control" >
                 <option selected>Choisir une formation</option>
-                <option *ngFor="let f of listFormation"  id="formation"  [value]="f.id"> {{f.title}} </option>  
+                <option *ngFor="let f of listFormation"    [value]="f.id"> {{f.title}} </option>  
              </select>
+
+             <label for="formateur">Formateur</label><br>
+             <select  [(ngModel)]="formateur" (ngModelChange)="modifValue($event)" name="formateur" id="formateur"  class="form-select form-control" >
+                 <option selected >Choisir un formateur</option>
+                 <option *ngFor="let t of listFormateur"   [value]="t.id"> {{t.prenom|uppercase}} {{t.nom|uppercase}}</option>  
+              </select>
              <br>
 
          

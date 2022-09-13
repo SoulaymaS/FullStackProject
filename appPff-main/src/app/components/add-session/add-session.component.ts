@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {  Router } from '@angular/router';
+import { Formateur } from 'src/app/models/Formateur';
 import { Formation } from 'src/app/models/Formation';
 import { Session } from 'src/app/models/Session';
+import { FormateurServiceService } from 'src/app/services/formateur-service.service';
 import { FormationService } from 'src/app/services/formation.service';
 import { SessionServiceService } from 'src/app/services/session-service.service';
 
@@ -13,10 +15,13 @@ import { SessionServiceService } from 'src/app/services/session-service.service'
 export class AddSessionComponent implements OnInit {
 listFormation:Formation[]
 listofsessions:Session[]
-show=false
+listFormateur
+forvalue
+formateur
+
   constructor(private FormSer: FormationService,
     private SessServ:SessionServiceService,
-    private router:Router,
+    private router:Router, private FormatServ:FormateurServiceService
     ) { }
 
   ngOnInit(): void {
@@ -29,6 +34,15 @@ show=false
     this.SessServ.getSessions().subscribe({
       next: (res)=> {
         this.listofsessions= res;
+        console.log(res);
+      }, error: (err) =>{
+        console.log(err);
+      }
+    });
+
+    this.FormatServ.getFormateurs().subscribe({
+      next: (res)=> {
+        this.listFormateur= res;
         console.log(res);
       }, error: (err) =>{
         console.log(err);
@@ -70,9 +84,16 @@ show=false
     }
   }
 
-  forvalue
+ 
   modify(id){
     this.forvalue= this.listFormation.find(x=> x.id == id);
     console.log(this.forvalue);
+  }
+
+  modifValue(id){
+    this.formateur=this.listFormateur.find(f=>f.id==id);
+    console.log(this.formateur);
+    
+
   }
 }

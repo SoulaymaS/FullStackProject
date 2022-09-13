@@ -38,8 +38,8 @@ export class SignInComponent implements OnInit {
         this.isLoginFailed = false;
         this.isLoggedIn = true;
         this.roles = this.tokenStorage.getUser().roles;
-        this.router.navigateByUrl('/acceuil');
-        window.location.reload();
+        this.router.navigateByUrl('');
+        
       },
       error: err => {
         this.errorMessage = err.error.message;
@@ -48,10 +48,7 @@ export class SignInComponent implements OnInit {
     });
   }
 
-  reloadPage(): void {
-    window.location.reload();
-    
-  }
+
    
     
 }

@@ -42,19 +42,23 @@ currentUser
     })
   }
 
-  AddUserToSession(currentUser){
-    this.mySession.users.push(currentUser)
-    this.SessServ.updateSession(this.mySession).subscribe({
-      next: (response) => {
-        alert("l'inscription a été effectué avec succès")
-        this.router.navigateByUrl((`/mesSessions/${currentUser.id}`))
+  AddUserToSession(idcurrentUser:any){ 
+    console.log(idcurrentUser);
+    
+    // this.mySession.users.push(currentUser.id)
+    // this.SessServ.updateSession(this.mySession).subscribe({
+    //   next: (response) => {
+    //     alert("l'inscription a été effectué avec succès")
+    //     // this.router.navigateByUrl((`/mesSessions/${currentUser.id}`))
+    //     console.log(this.mySession);
+        
      
-      },
-      error: (err) => {
-        console.log('Probleme avec AddUserToSession' );
-      }, 
+    //   },
+    //   error: (err) => {
+    //     console.log('Probleme avec AddUserToSession' );
+    //   }, 
 
-    })
+    // })
 }
 
 }

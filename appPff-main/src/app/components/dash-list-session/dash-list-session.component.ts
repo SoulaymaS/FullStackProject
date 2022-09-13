@@ -9,7 +9,7 @@ import { SessionServiceService } from 'src/app/services/session-service.service'
   styleUrls: ['./dash-list-session.component.css']
 })
 export class DashListSessionComponent implements OnInit {
-  listofsessions:Session[]
+  listofsessions
 
   constructor(private SessServ:SessionServiceService, private router:Router) { }
   

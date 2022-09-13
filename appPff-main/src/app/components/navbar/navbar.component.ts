@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 import { LoginServiceService } from './../../services/login-service.service';
 import { TokenStorageService } from './../../services/token-storage.service';
 
@@ -11,7 +12,7 @@ import { TokenStorageService } from './../../services/token-storage.service';
 export class NavbarComponent implements OnInit {
 currentUser
 
-  constructor(private token:TokenStorageService, public logSer: LoginServiceService) { }
+  constructor(private token:TokenStorageService, public logSer: LoginServiceService, private router:Router) { }
 
   ngOnInit(): void {
     this.currentUser = this.token.getUser();
@@ -30,7 +31,7 @@ onWindowScroll() {
   }
   toLogout(){
     this.logSer.tologout();
-    window.location.reload();
+    this.router.navigateByUrl('/signin');
     }
 
 }
