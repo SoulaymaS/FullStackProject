@@ -32,30 +32,20 @@ h3{
     grid-template-columns: 50% 50%;
     column-gap: 5rem;
     row-gap: 2rem;
-    align-items: center;
-    
+  
+   
 }
 @media(max-width: 500px) {
     .row {
       grid-template-columns: 1fr;
       column-gap: 3rem;
     }  
-    .card {
-    
-      height: 60%;
-      width:100%;
-      
-    }
   }
 
 .card {
-
-    align-self: center;
-  height: 60%;
+ 
+    
+  height: 100%;
   width:80%;
   
-}
-.cardimag{
-    height:80%;
-    width: 100%;
 }

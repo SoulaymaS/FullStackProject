@@ -3,5 +3,16 @@
     text-align: center;
 }
 .position{
-    padding:  60px 10px 0; /* Height of navbar */;
+    padding:  100px; /* Height of navbar */;
+}
+.btn{
+    float: right;
+
+    background-color: white;
+    color: rgb(33, 142, 250);
+    border-color: rgb(33, 142, 250);
+    font-size: 25px;
+}
+h6{
+    font-weight: bold;
 }
