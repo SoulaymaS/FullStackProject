@@ -7,7 +7,7 @@
                       <div class="facture">
                           <div class="entete">
                               <span id="nomPrenom">Bsila Hend</span>
-                              <p id="adresseMail">Adresse Mail</p>
+                              <p id="adresseMail">{{currentUser.email}}</p>
                               <p>Num CIN 1234 1234 </p>
                           </div>
                           <hr>
@@ -31,7 +31,7 @@
                                   </tr>
                                   <tr>
                                       <td><span>Prix de l'heure</span> </td>
-                                      <td><span>{{mySession.prix}} Dinars TTC</span></td>
+                                      <td><span>{{mySession.heureprix}} Dinars TTC</span></td>
                                   </tr>
                                   <tr>
                                     <td><span>Total</span> </td>

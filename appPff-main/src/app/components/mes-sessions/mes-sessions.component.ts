@@ -9,9 +9,9 @@ import { TokenStorageService } from 'src/app/services/token-storage.service';
   styleUrls: ['./mes-sessions.component.css']
 })
 export class MesSessionsComponent implements OnInit {
-  myListOfSessions
+  myListOfSessions=[]
   currentUser
-  SessionList
+  SessionList=[]
   
   constructor(private tokenStorage:TokenStorageService ,private route: ActivatedRoute, private SessServ: SessionServiceService) { }
 
@@ -23,15 +23,20 @@ export class MesSessionsComponent implements OnInit {
       next: (response) => {
         this.SessionList= response;
         console.log(this.SessionList);
-        this.SessionList.forEach(e=>e.formateur.forEach(u=>{if (u.id==this.currentUser.id) 
-        this.myListOfSessions.push(e)} 
-         ))
-         console.log(this.myListOfSessions);
+        // this.myListOfSessions=this.SessionList.filter(f=>f.formateur.username==this.currentUser.username)
+        this.SessionList.forEach(e => { if (e.formateur.username==this.currentUser.username){
+          this.myListOfSessions.push(e)
+        }
+          
+        });
+        console.log(this.myListOfSessions);
       },
       error: (err) => {
         console.log('Probleme avec getsession my session list' );
       },
     });
+
+
     };
 
 

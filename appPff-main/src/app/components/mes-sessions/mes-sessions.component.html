@@ -10,11 +10,10 @@
               <div class="card">
                   <div class="card-body">
                       <h5 class="card-title title ">{{s.formation.title}}</h5>
-                      <h6 class="card-subtitle">{{s.date|date:'mediumDate'}} </h6>
-                      <h6 class="card-subtitle duration">{{s.duration}} </h6>
-                      <p class="card-subtitle prix">{{s.prix}} Dinar TTC</p><br><br><br>
+                      <h6 class="card-subtitle">{{s.date|date:'longDate'}} </h6>
+                      <h6 class="card-subtitle duration">{{s.duration}} </h6><br><br>
                       <p class="card-text">{{s.formation.description}}</p>
-                      <a [routerLink]="['/payement', s.id ]"class="btn btn-success">S'inscrire</a>
+                      <a [routerLink]="['/note-honoraire/', s.id ]"class="btn ">Note d'honoraire</a>
                   </div>
 
               </div>
