@@ -27,7 +27,7 @@
         <div class="card d-none d-md-block">
           <div class="card-body">
             <h5 class="card-title title">{{sessionList[2].formation.title}}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">{{sessionList[2].duration}}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">{{sessionList[2].duration}} </h6>
             <p class="card-text">{{sessionList[2].prix}} Dinars TTC</p>
             <div class="btn-group">
               <a [routerLink]="['/sessions/', sessionList[2].formation.id, 'payement']" class="btn btn-success">S'inscrire</a>

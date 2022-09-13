@@ -4,7 +4,7 @@
         <h3> Modifier la session </h3>
         <form #f="ngForm" (ngSubmit)="modifSession (f.value)">
             <label for="date">Date</label>
-            <input ngModel required type="Date" class="form-control" id="date" name="date">
+            <input ngModel  type="Date" class="form-control" id="date" name="date">
             
   
             <label for="duration">Duration</label>
@@ -17,12 +17,18 @@
             <input [(ngModel)]="mySession.heureprix"  ngModel type="number" class="form-control" id="heureprix" name="heureprix">
             
             <label for="formation">Formation</label><br>
-            <select  [(ngModel)]="mySession.formation" ngModel name="formation"  class="form-select form-control"   >
-                <option *ngFor="let f of listFormation"  id="formation" value={{f}}> {{f.title}} </option>  
+            <select  [(ngModel)]="forvalue" (ngModelChange)="modify($event)" id="formation" name="formation"  class="form-select form-control" >
+                <option *ngFor="let f of listFormation"    [value]="f.id"> {{f.title}} </option>  
              </select>
+
+             <label for="formateur">Formateur</label><br>
+             <select  [(ngModel)]="formateur" (ngModelChange)="modifValue($event)" name="formateur" id="formateur"  class="form-select form-control" >
+                 <option *ngFor="let t of listFormateurs"   [value]="t.id"> {{t.prenom|uppercase}} {{t.nom|uppercase}}</option>  
+              </select>
+             <br>
              <br>
              <div class="form-check form-switch form-switch-md">
-                <label class="form-check-label" for="sessionStatus">Statut</label>
+                <label class="form-check-label" for="sessionStatus" >Statut</label>
 
                 <input class="form-check-input btnSwitch" [(ngModel)]="mySession.sessionStatus" ngModel type="checkbox" role="switch" id="sessionStatus" name="sessionStatus">
                
@@ -34,3 +40,4 @@
         <br><br>
     </div>
 </div>
+  
