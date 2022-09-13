@@ -1,6 +1,6 @@
 .btn {
-    background-color: rgb(109, 203, 199);
-    border-color: rgb(109, 203, 199);;
+    background-color: #ffbd59;
+    border-color:  #ffbd59;
 }
 .btn:hover{
     color: black;
@@ -37,4 +37,9 @@
 .btn-group{
   float: right;
 
+}
+.position{
+  
+    padding-top: 5%;
+  
 }

@@ -38,5 +38,8 @@ currentUser
     });
    this.Total=this.mySession.heureprix*this.mySession.duration
   }
-
+  validate(){
+    alert("Paiement validé!");
+    console.log("valide");
+  }
 }

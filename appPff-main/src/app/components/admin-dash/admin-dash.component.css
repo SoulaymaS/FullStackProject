@@ -38,13 +38,13 @@ body {
 }
 
 .active {
-    background-color: rgb(109, 203, 199);
-    border-color: rgb(109, 203, 199);
+    background-color: #ffbd59;
+    border-color: #ffbd59;
 }
 
 .active:hover {
-    background-color: rgb(109, 203, 199, 0.8);
-    border-color: rgb(109, 203, 199, 0.8);
+    background-color: #ffbd59;
+    border-color: #ffbd59;
     color: black;
 }
 

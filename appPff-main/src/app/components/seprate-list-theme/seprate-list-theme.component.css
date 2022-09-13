@@ -10,11 +10,13 @@
 h1{
     font-size: 4vw;
     text-align: center;
-
+    font-family: monospace;
 }
+
 h3{
     font-size: 2vw;
     padding-left: 2%;
+    font-family: monospace;
 }
 @media(max-width: 500px) {
     h3{
@@ -31,6 +33,7 @@ h3{
     display: grid;
     grid-template-columns: 50% 50%;
     column-gap: 5rem;
+    
     row-gap: 2rem;
   
    
@@ -43,9 +46,19 @@ h3{
   }
 
 .card {
- 
-    
-  height: 100%;
+
+  align-self: center;
+  height: 60%;
   width:80%;
   
+  
+  
+}
+.cardimag{
+    height:80%;
+    width: 100%;
+}
+.card-img-top{
+  height:80%;
+    width: 100%;
 }

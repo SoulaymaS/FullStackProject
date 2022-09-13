@@ -27,7 +27,7 @@
         <div class="card d-none d-md-block">
           <div class="card-body">
             <h5 class="card-title title">{{sessionList[2].formation.title}}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">{{sessionList[2].duration}} </h6>
+            <h6 class="card-subtitle mb-2 text-muted">{{sessionList[2].duration}} heures </h6>
             <p class="card-text">{{sessionList[2].prix}} Dinars TTC</p>
             <div class="btn-group">
               <a *ngIf="logSe.isLoggedIn()" [routerLink]="['/sessions/', sessionList[2].formation.id, 'payement']" class="btn btnSinscrire">S'inscrire</a>
@@ -43,7 +43,7 @@
         <div class="card">
           <div class="card-body">
             <h5 class="card-title title">{{sessionList[3].formation.title}}  </h5>
-            <h6 class="card-subtitle mb-2 text-muted">{{sessionList[3].duration}} </h6>
+            <h6 class="card-subtitle mb-2 text-muted">{{sessionList[3].duration}} heures </h6>
             <p class="card-text">{{sessionList[3].prix}} Dinars TTC</p>
             <div class="btn-group">
               <a *ngIf="logSe.isLoggedIn()" [routerLink]="['/sessions/', sessionList[3].formation.id, 'payement']" class="btn btnSinscrire">S'inscrire</a>
@@ -54,7 +54,7 @@
         <div class="card d-none d-md-block">
           <div class="card-body">
             <h5 class="card-title title">{{sessionList[4].formation.title}}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">{{sessionList[4].duration}}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">{{sessionList[4].duration}} heures</h6>
             <p class="card-text">{{sessionList[4].prix}} Dinars TTC</p>
             <div class="btn-group">
               <a  *ngIf="logSe.isLoggedIn()" [routerLink]="['/sessions/', sessionList[4].formation.id, 'payement']" class="btn btnSinscrire">S'inscrire</a>
@@ -65,7 +65,7 @@
         <div class="card d-none d-md-block">
           <div class="card-body">
             <h5 class="card-title title">{{sessionList[5].formation.title}}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">{{sessionList[5].duration}}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">{{sessionList[5].duration}} heures</h6>
             <p class="card-text">{{sessionList[5].prix}} Dinars TTC</p>
             <div class="btn-group">
               <a *ngIf="logSe.isLoggedIn()" [routerLink]="['/sessions/', sessionList[5].formation.id, 'payement']" class="btn btnSinscrire">S'inscrire</a>
@@ -80,7 +80,7 @@
         <div class="card ">
           <div class="card-body">
             <h5 class="card-title title">{{sessionList[6].formation.title}}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">{{sessionList[6].duration}}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">{{sessionList[6].duration}} heures</h6>
             <p class="card-text">{{sessionList[6].prix}} Dinars TTC</p>
             <div class="btn-group">
               <a *ngIf="logSe.isLoggedIn()" [routerLink]="['/sessions/', sessionList[6].formation.id, 'payement']" class="btn btnSinscrire">S'inscrire</a>
@@ -91,10 +91,10 @@
         <div class="card d-none d-md-block">
           <div class="card-body">
             <h5 class="card-title title">{{sessionList[7].formation.title}}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">{{sessionList[7].duration}}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">{{sessionList[7].duration}} heures</h6>
             <p class="card-text">{{sessionList[7].prix}} Dinars TTC</p>
             <div class="btn-group">
-              <button [routerLink]="['/sessions/', sessionList[7].formation.id, 'payement']" class="btn btnSinscrire">S'inscrire</button>
+              <button *ngIf="logSe.isLoggedIn()" [routerLink]="['/sessions/', sessionList[7].formation.id, 'payement']" class="btn btnSinscrire">S'inscrire</button>
               <button [routerLink]="['/sessions/', sessionList[7].formation.id]" class="btn btnDecouvrir">Découvrir</button>
             </div>
           </div>

@@ -1,5 +1,6 @@
 .position{
-    padding:  60px 10px 0; /* Height of navbar */;
+    /* padding:  60px 10px 0; /* Height of navbar */
+    padding-top: 10%;
 }
 /* #profile{
     margin: 10% 10% 10% 10%;
@@ -12,6 +13,7 @@
 .title{
     font-size: 3vw;
     text-align: center;
+    font-family: monospace;
 }
 .profileCard{
     border-radius: 10px;
@@ -43,7 +45,8 @@ table{
 }
 td{
     text-align: left;
-    font-size: 1.4rem
+    font-size: 1.4rem;
+    
 }
 
 .alert-danger{

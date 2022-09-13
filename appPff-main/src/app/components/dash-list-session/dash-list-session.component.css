@@ -1,6 +1,9 @@
+#sect{
+  padding-top: 5%;
+}
 .btnModifer{
-    border-color: rgb(109, 203, 199);
-    color:rgb(109, 203, 199);
+    border-color: #1f3c64;
+    color:#1f3c64;
     background-color: white;
 }
 .btnSupprimer{
@@ -9,7 +12,15 @@
     background-color: white;
     margin-left: 5%;
 }
+.btnSupprimer:hover{
+  background-color: red;
+  color: white;
+}
 .btn-group{
   float: right;
 
+}
+.btnModifer:hover{
+  background-color: #1f3c64;
+  color:white;
 }
