@@ -17,7 +17,7 @@ listFormation:Formation[]
 listofsessions:Session[]
 listFormateur
 forvalue
-formateur
+forma
 
   constructor(private FormSer: FormationService,
     private SessServ:SessionServiceService,
@@ -91,8 +91,8 @@ formateur
   }
 
   modifValue(id){
-    this.formateur=this.listFormateur.find(f=>f.id==id);
-    console.log(this.formateur);
+    this.forma=this.listFormateur.find(f=>f.id==id);
+    console.log(this.forma);
     
 
   }

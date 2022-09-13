@@ -30,20 +30,12 @@ currentUser
         console.log('Probleme avec paramMap');
       },
     });
-    this.tokenStorage.getUser().subscribe({
-      next: (response) => {
-        this.currentUser= response
-     
-      },
-      error: (err) => {
-        console.log('Probleme avec get current User' );
-      },
-
-    })
+   
   }
 
-  AddUserToSession(idcurrentUser:any){ 
-    console.log(idcurrentUser);
+  AddUserToSession(){ 
+    this.currentUser= this.tokenStorage.getUser();
+    console.log(this.currentUser);
     
     // this.mySession.users.push(currentUser.id)
     // this.SessServ.updateSession(this.mySession).subscribe({

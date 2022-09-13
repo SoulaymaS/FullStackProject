@@ -16,25 +16,17 @@ export class MesSessionsComponent implements OnInit {
   constructor(private tokenStorage:TokenStorageService ,private route: ActivatedRoute, private SessServ: SessionServiceService) { }
 
   ngOnInit(): void {
-    this.tokenStorage.getUser().subscribe({
-      next: (response) => {
-        this.currentUser= response
-     
-      },
-      error: (err) => {
-        console.log('Probleme avec get current User' );
-      },
-
-    })
+    this.currentUser = this.tokenStorage.getUser();
+    console.log(this.currentUser);
 
     this.SessServ.getSessions().subscribe({
       next: (response) => {
-        this.SessionList= response
-        this.SessionList.forEach(e=>e.users.forEach(u=>{if (u.id==this.currentUser.id) 
+        this.SessionList= response;
+        console.log(this.SessionList);
+        this.SessionList.forEach(e=>e.formateur.forEach(u=>{if (u.id==this.currentUser.id) 
         this.myListOfSessions.push(e)} 
-          
-          ))
-     
+         ))
+         console.log(this.myListOfSessions);
       },
       error: (err) => {
         console.log('Probleme avec getsession my session list' );
