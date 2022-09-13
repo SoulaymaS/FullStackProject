@@ -17,7 +17,7 @@ h3{
     padding-left: 2%;
 }
 @media(max-width: 500px) {
-    .h3{
+    h3{
         font-size: 6vw;
         text-align: center;
         
@@ -25,6 +25,7 @@ h3{
     h1{
         font-size: 8vw;
     }
+   
 }
 .row {
     display: grid;
@@ -32,18 +33,24 @@ h3{
     column-gap: 5rem;
     row-gap: 2rem;
     align-items: center;
-    grid-template-areas:
-    "b a";
+    
 }
 @media(max-width: 500px) {
     .row {
       grid-template-columns: 1fr;
+      column-gap: 3rem;
     }  
+    .card {
+    
+      height: 60%;
+      width:100%;
+      
+    }
   }
 
 .card {
-    grid-area: a;
-    align-self: end;
+
+    align-self: center;
   height: 60%;
   width:80%;
   

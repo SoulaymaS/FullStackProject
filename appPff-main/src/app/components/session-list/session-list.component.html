@@ -3,7 +3,7 @@
         <!-- <img src="https://cdn.pixabay.com/photo/2017/09/14/08/28/head-2748333_960_720.jpg"> -->
         <!-- "https://images.pexels.com/photos/256417/pexels-photo-256417.jpeg?cs=srgb&dl=pexels-pixabay-256417.jpg&fm=jpg" -->
         <img class="imagenav"
-            src="https://img.freepik.com/vecteurs-libre/jeunes-gens-marchant-devant-illustration-plate-college-universite_74855-14224.jpg?w=1380&t=st=1662673181~exp=1662673781~hmac=ef5d843c8c041f14fc7eb4192ed142fa32742804b0ee4c9caa169b04734adc09"
+            src="https://img.freepik.com/photos-premium/fille-etudiante-rit-sourit-regarde-au-loin-isolee-banniere-web-espace-copie-fond-bleu_101969-2491.jpg?w=1060"
             alt="not-found">
     </div>
 
@@ -29,7 +29,8 @@
                         <h6 class="card-subtitle duration">{{s.duration}} </h6>
                         <p class="card-subtitle prix">{{s.prix}} Dinar TTC</p><br><br><br>
                         <p class="card-text">{{s.formation.description}}</p>
-                        <a [routerLink]="['/payement', s.id ]"class="btn btn-success">S'inscrire</a>
+                        <a *ngIf="loginServ.isLoggedIn()" [routerLink]="['/payement', s.id ]"class="btn btn-success">S'inscrire</a>
+                        <a *ngIf="!loginServ.isLoggedIn()" [routerLink]="['/signup' ]"class="btn btn-success">S'inscrire</a>
                     </div>
 
                 </div>

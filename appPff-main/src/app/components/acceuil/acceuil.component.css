@@ -115,8 +115,9 @@ blockquote cite:before {
      #image{
         height: 100%
      }
-     .secImage{
-        height: 35vh;
+     .sectionImage{
+        height: 100%;
+        
      }
      
 }

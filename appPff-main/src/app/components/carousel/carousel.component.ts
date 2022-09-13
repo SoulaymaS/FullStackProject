@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginServiceService } from 'src/app/services/login-service.service';
 import { SessionServiceService } from 'src/app/services/session-service.service';
 
 
@@ -10,7 +11,7 @@ import { SessionServiceService } from 'src/app/services/session-service.service'
 export class CarouselComponent implements OnInit {
   sessionList
 
-  constructor(private SessServ:SessionServiceService) { }
+  constructor(private SessServ:SessionServiceService, public logSe:LoginServiceService) { }
 
   ngOnInit(): void {
     this.SessServ.getSessions().subscribe({

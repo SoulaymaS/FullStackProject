@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { FormationService } from 'src/app/services/formation.service';
+import { LoginServiceService } from 'src/app/services/login-service.service';
 import { SessionServiceService } from 'src/app/services/session-service.service';
 
 @Component({
@@ -10,7 +11,7 @@ import { SessionServiceService } from 'src/app/services/session-service.service'
 })
 export class SessionListComponent implements OnInit {
  
-  constructor(private FormServ: FormationService, private activatedRoute:ActivatedRoute, private SessServ:SessionServiceService ) { }
+  constructor(private FormServ: FormationService, private activatedRoute:ActivatedRoute, private SessServ:SessionServiceService, private loginServ:LoginServiceService ) { }
   listsessions
   listformations
   ngOnInit(): void {
