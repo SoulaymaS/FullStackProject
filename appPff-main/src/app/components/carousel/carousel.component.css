@@ -37,7 +37,7 @@
 }
 p{
   font-family: monospace;
-  color:#ffbd59;
+  color:rgb(251, 193, 2);
 }
 h5{
   font-family: monospace;
@@ -46,3 +46,25 @@ h5{
 p:hover{
   font-size: 20px;
 }
+
+.btnSinscrire{
+  color:white;
+  background-color: rgb(10, 92, 10);
+  border-color: white;
+  }
+  .btnSinscrire:hover{
+    background-color: white;
+    border-color: rgb(10, 92, 10);
+    color:rgb(10, 92, 10) ;
+    }
+  .btnDecouvrir:hover{
+    color:black;
+border-color:rgb(251, 193, 2);
+background-color: white;
+
+  }
+  .btnDecouvrir{
+    color:white;
+    background-color:rgb(251, 193, 2);
+    border-color:white;
+    }

@@ -61,7 +61,7 @@
         <div  class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" [routerLink]="['profile/' ,currentUser.id]"  ><i class="icon fa-solid fa-user"></i>Mon compte</a>
           <a class="dropdown-item" [routerLink]="['profile/' ,currentUser.id]" ><i class="icon fa-solid fa-gear"></i>Paramètres</a>
-          <a class="dropdown-item" *ngIf="logSer.isLoggedIn()" [routerLink]="['mesSessions/' ,currentUser.id]"><i class="icon fa-solid fa-book"></i>Mes Sessions</a>
+          <a class="dropdown-item" *ngIf="!logSer.isAdmin()" [routerLink]="['mesSessions/' ,currentUser.id]"><i class="icon fa-solid fa-book"></i>Mes Sessions</a>
           <a class="dropdown-item" *ngIf="logSer.isFormateur()" [routerLink]="['note-honoraire/', currentUser.id]"><i class="icon fa-solid fa-money-check-dollar"></i>Note d'honoraire</a>
           <a class="dropdown-item" *ngIf="logSer.isAdmin()" routerLink="adminPage"  ><i class="icon fa-solid fa-desktop "></i>Back office</a>
           <a class="dropdown-item" routerLink="acceuil" *ngIf="logSer.isLoggedIn()" (click)="toLogout()"><i class="icon fa-solid fa-arrow-right-from-bracket"></i>Logout</a>
